@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js"></script>
+    <title>Single App</title>
+</head>
+
+<body>
+    <!-- Splash -->
+    <section id="seccion-splash" class="splash animated zoomIn">
+        <img id="img-splash" src="img/Grupo 26.png" alt="splash">
+    </section>
+    <!-- info -->
+    <section id="seccion-info" class="info oculto">
+        <div id="div-info">
+            <h1 id="h1-info">Positivo</h1>
+            <p id="p-info">En esta app encontrarás todo lo que necesitas si estas interesado en conocer más sobre los gatos positivos a sida y a leucemia felina.</p>
+            <!-- <div id="img-info"></div> -->
+            <img src="img/Grupo 26.png" id="imgGato-info" alt="imagen">
+        </div>
+        <div id="indice-info">
+            <img id="indice1-info" class="indices-info" src="img/Elipse 6.png" alt="imagen">
+            <img id="indice2-info" class="indices-info" src="img/Elipse 7.png" alt="imagen">
+            <img id="indice3-info" class="indices-info" src="img/Elipse 7.png" alt="imagen">
+        </div>
+        <img src="img/Grupo 311.png" id="imgSaltar" class="imgComenzar-info boton" alt="imagen" onclick="cambiarSeccion(3);">
+        <img id="boton-info" class="boton" src="img/Grupo 32.png" alt="imagen" onclick="SiguientePagInfo();">
+        <img id="botonizq-info" class="oculto boton" src="img/Grupo 33.png" alt="imagen" onclick="RetrocederPagInfo();">
+
+    </section>
+    <!-- Home -->
+    <section id="seccion-home" class="home oculto">
+        <img id="fondo-home" src="img/Componente 9 – 1.png" alt="imagen">
+        <img id="logo-home" src="img/Componente 5 – 1.png" alt="logo">
+        <div id="adopciones-home" class="botones-home boton" onclick="cambiarSeccion(6);"></div>
+        <div id="miGatoPositivo-home" class="botones-home boton" onclick="cambiarSeccion(7);"></div>
+        <div id="orca-home" class="boton" onclick="cambiarSeccion(4);"></div>
+    </section>
+    <!-- Orca -->
+    <section id="seccion-orca" class="orca oculto">
+        <img id="Volver-orca" class="boton" src="img/volver.png" alt="volver" onclick="cambiarSeccion(3);">
+        <img id="logo-orca" src="img/Enmascarar grupo 1.png" alt="logo">
+        <div id="panel-orca">
+            <h4 id="h4-orca" class="texto-orca">¿Que es Orca?</h4>
+            <div>
+                <p class="texto-orca">O.R.C.A. es la Organización por el Respeto y el Cuidado de los animales, es la materialización de la voluntad de varias personas que se unieron en pos de ayudar de manera solidaria, a los animales de calle, víctimas de violencia, abandono
+                    y maltrato de la Ciudad de Medellín, Área Metropolitana y alrededores.</p>
+            </div>
+            <h4 id="h12-orca">Contacto</h4>
+            <div>
+                <div class="texto-orca">
+                    <h5>DIRECCION</h5>
+                    <p>http://www.fundacionorca.org</p>
+                    <p>contactenos@fundacionorca.org</p>
+                </div>
+
+                <div class="texto-orca">
+                    <h5>HORARIOS</h5>
+                    <p>Lunes a Viernes</p>
+                    <p>8:00 am - 12 m y 1.00 a 6:30 pm</p>
+                </div>
+
+                <div class="texto-orca">
+                    <h5>WEB</h5>
+                    <p>http://www.fundacionorca.org</p>
+                    <p>Email: contactenos@fundacionorca.org</p>
+                </div>
+            </div>
+            <h4>¿Como ayudar?</h4>
+            <div class="btn-orca boton" onclick="cambiarSeccion(5);">Plan padrino</div>
+            <div class="btn-orca boton" onclick="cambiarSeccion(5);">Voluntariado</div>
+            <div class=" btn-orca boton " onclick="cambiarSeccion(5);">Donaciones</div>
+        </div>
+    </section>
+    <!-- Colaboraciones -->
+    <section id="seccion-colaboraciones" class="colaboraciones oculto">
+        <img class="boton" src="img/volver.png" alt="volver" onclick="cambiarSeccion(4);">
+    </section>
+    <!-- Adopciones -->
+    <section id="seccion-adopciones" class="adopciones oculto">
+        <img class="boton" src="img/volver.png" alt="volver" onclick="cambiarSeccion(3);">
+    </section>
+    <!-- Ayudas -->
+    <section id="seccion-ayudas" class="ayudas oculto">
+        <img class="boton" src="img/volver.png" alt="volver" onclick="cambiarSeccion(3);">
+    </section>
+    <!-- Créditos / Autores -->
+    <section id="seccion-creditos" class="creditos oculto">
+
+    </section>
+    <!-- Instrucciones -->
+    <section id="seccion-instrucciones" class="instrucciones oculto">
+
+    </section>
+    <div id="ventana" class="ventanaAyuda-juego oculto">
+        <div id="fondo-ventanaAyuda ">
+        </div>
+        <div id="panel-ayuda "></div>
+        <div id="cerrar ">
+        </div>
+        <div id="imagenAyuda " class="imagen-ayuda ">
+        </div>
+    </div>
+</body>
+
+</html>

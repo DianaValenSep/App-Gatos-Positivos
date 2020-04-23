@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+}
+
+html {
+    font-family: helvetica, sans-serif;
+}
+
+section {
+    width: 360px;
+    height: 720px;
+    text-align: center;
+}
+
+.splash {
+    background: white;
+}
+
+#img-splash {
+    margin: auto;
+    position: relative;
+    top: 250px;
+    width: 190px;
+    height: 183px;
+}
+
+.info {
+    background: rgb(253, 198, 32);
+}
+
+.indices-info {
+    margin: 15px;
+}
+
+.imgComenzar-info {
+    position: relative;
+    top: 200px;
+}
+
+#boton-info {
+    position: absolute;
+    left: 330px;
+    top: 255px;
+}
+
+#botonizq-info {
+    position: absolute;
+    left: 10px;
+    top: 255px;
+}
+
+#div-info {
+    position: relative;
+    top: 80px;
+    margin: auto;
+    background-color: white;
+    width: 250px;
+    height: 400px;
+    border-radius: 5%;
+}
+
+#h1-info {
+    margin-bottom: 40px;
+}
+
+#p-info {
+    display: flex;
+    justify-content: left;
+    margin-bottom: 40px;
+    margin: auto;
+    width: 80%;
+}
+
+#imgGato-info {
+    margin-top: 35px;
+    width: 190px;
+    height: 183px;
+}
+
+#indice-info {
+    position: relative;
+    top: 130px;
+}
+
+.home {
+    background: white;
+}
+
+#logo-home {
+    margin: auto;
+    z-index: 4;
+    position: relative;
+    top: 95px;
+}
+
+.botones-home {
+    position: relative;
+    top: 150px;
+    left: 53.9%;
+    margin-bottom: 30px;
+    width: 166px;
+    height: 93px;
+    background-position: center;
+    border-radius: 10%;
+}
+
+#adopciones-home {
+    background-image: url(../img/Componente\ 6\ –\ 1.png);
+}
+
+#miGatoPositivo-home {
+    background-image: url(../img/Componente\ 7\ –\ 1.png);
+}
+
+#orca-home {
+    background-image: url(../img/Componente\ 8\ –\ 1.png);
+    position: relative;
+    top: 220px;
+    left: 20px;
+    width: 50px;
+    height: 70px;
+}
+
+#fondo-home {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 720px;
+    z-index: 0;
+}
+
+.orca {
+    background: rgb(253, 198, 32);
+    position: relative;
+}
+
+.titulo-orca {
+    margin: 32px;
+}
+
+.texto-orca {
+    margin: 11px;
+}
+
+.btn-orca {
+    display: inline;
+    position: relative;
+    top: 34.5px;
+    margin: 2px;
+    padding: 12px;
+    background-color: rgb(253, 198, 32);
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+}
+
+#Volver-orca {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    height: 24px;
+    width: 110px;
+}
+
+#logo-orca {
+    width: 173px;
+    height: 173px;
+    position: relative;
+    margin: auto;
+    top: 40px;
+}
+
+#panel-orca {
+    position: relative;
+    top: 50px;
+    height: 481.1px;
+    width: 100%;
+    background-color: white;
+    border-top-right-radius: 10%;
+    border-top-left-radius: 10%;
+}
+
+#h4-orca {
+    position: relative;
+    top: 6px;
+}
+
+.colaboraciones {
+    background: yellow;
+}
+
+.adopciones {
+    background: blue;
+}
+
+.ayudas {
+    background: red;
+}
+
+.instrucciones {
+    background: rgb(133, 172, 231);
+}
+
+.creditos {
+    background: white;
+}
+
+.boton {
+    cursor: pointer;
+}
+
+.oculto {
+    display: none;
+}
