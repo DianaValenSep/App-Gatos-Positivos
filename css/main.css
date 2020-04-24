@@ -153,14 +153,6 @@ section {
     border-top-right-radius: 20%;
 }
 
-#Volver-orca {
-    position: absolute;
-    top: 10px;
-    right: 0px;
-    height: 24px;
-    width: 110px;
-}
-
 #logo-orca {
     width: 173px;
     height: 173px;
@@ -185,23 +177,128 @@ section {
 }
 
 .colaboraciones {
-    background: yellow;
+    background: white;
+}
+
+#seccion-colaboraciones {
+    position: relative;
+}
+
+#fondo-colaboraciones {
+    position: absolute;
+}
+
+#fondo-colaboraciones {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 720px;
+    z-index: 0;
+}
+
+#contenedor-colaboraciones {
+    position: relative;
+    top: 185px;
+}
+
+#p-colaboraciones {
+    width: 300px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+#btnPrincipal-colaboraciones {
+    position: absolute;
+    top: 500px;
+    right: 0px;
+    height: 84px;
+    width: 163px;
+    background-image: url(../img/Componente\ 4\ –\ 1.png);
+}
+
+#contenedorBtn-colaboraciones {
+    position: absolute;
+    bottom: 12px;
+}
+
+.btn-colaboracion {
+    display: inline;
+    position: relative;
+    margin: 2px;
+    padding: 12px;
+    background-color: rgb(253, 198, 32);
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
 }
 
 .adopciones {
     background: blue;
 }
 
+#seccion-adopciones {
+    position: relative;
+}
+
 .ayudas {
-    background: red;
+    background-color: rgb(253, 198, 32);
 }
 
-.instrucciones {
-    background: rgb(133, 172, 231);
+#seccion-ayudas {
+    position: relative;
 }
 
-.creditos {
-    background: white;
+#h1-ayudas {
+    position: relative;
+    margin: auto;
+    top: 8%;
+}
+
+#img-ayudas {
+    position: absolute;
+    right: 15px;
+    top: 19%;
+}
+
+#panel-ayudas {
+    background-color: white;
+    width: 100%;
+    height: 60%;
+    position: absolute;
+    top: 40%;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+}
+
+.formulario {
+    background-color: white;
+}
+
+#seccion-formulario {
+    position: relative;
+}
+
+.btn-volver {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    height: 24px;
+    width: 110px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+#fondo1-formulario {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+}
+
+#fondo2-formulario {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
 }
 
 .boton {

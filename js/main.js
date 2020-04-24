@@ -14,8 +14,8 @@ function inicializarReferencias() {
     secciones[5] = document.getElementById("seccion-colaboraciones");
     secciones[6] = document.getElementById("seccion-adopciones");
     secciones[7] = document.getElementById("seccion-ayudas");
+    secciones[8] = document.getElementById("seccion-formulario");
 }
-
 
 function cambiarSplash() {
     secciones[1].className = "splash oculto";
@@ -89,4 +89,46 @@ function RetrocederPagInfo() {
     }
 }
 
-/* Funciones - orca ----------------------------------------------------------*/
+/* Funciones - colaboraciones ----------------------------------------------------------*/
+function MostrarColaboraciones(id_colaboracion) {
+    let titulo = document.getElementById("titulo-colaboraciones");
+    let texto = document.getElementById("p-colaboraciones");
+    let btnPrincipal = document.getElementById("btnPrincipal-colaboraciones");
+    let btnColaboracion1 = document.getElementById("btnColaboracion1");
+    let btnColaboracion2 = document.getElementById("btnColaboracion2");
+    let btnColaboracion3 = document.getElementById("btnColaboracion3");
+    if (id_colaboracion == "Plan padrino") {
+        titulo.innerHTML = "Plan padrino";
+        texto.innerHTML = "Los padrinos, le devuelven a un ser abandonado, la certeza de ser un alguien importante, una vida llena de oportunidades; la posibilidad de olvidar, los padecimientos del pasado, el dolor, el hambre, el frío y el miedo, sabiendo que hay alguien que los apoya, que los quiere y los acompaña hasta que logren el fin de hallar un lindo hogar.";
+        btnPrincipal.style.backgroundImage = "url('img/Componente 4 – 1.png')";
+
+        btnColaboracion1.style.paddingTop = 20;
+        btnColaboracion1.style.backgroundColor = "rgb(237,181,14)";
+        btnColaboracion2.style.paddingTop = 12;
+        btnColaboracion2.style.backgroundColor = "rgb(253, 198, 32)";
+        btnColaboracion3.style.paddingTop = 12;
+        btnColaboracion3.style.backgroundColor = "rgb(253, 198, 32)";
+    } else if (id_colaboracion == "Voluntariado") {
+        titulo.innerHTML = "Voluntariado";
+        texto.innerHTML = "Buscamos voluntarios que nos ayuden a cambiar la realidad de los animales que sufren. Tu puedes hacer parte de nuestra red de voluntarios.";
+        btnPrincipal.style.backgroundImage = "url('img/Componente 11 – 1.png')";
+
+        btnColaboracion1.style.paddingTop = 12;
+        btnColaboracion1.style.backgroundColor = "rgb(253, 198, 32)";
+        btnColaboracion2.style.paddingTop = 20;
+        btnColaboracion2.style.backgroundColor = "rgb(237,181,14)";
+        btnColaboracion3.style.paddingTop = 12;
+        btnColaboracion3.style.backgroundColor = "rgb(253, 198, 32)";
+    } else if (id_colaboracion == "Donaciones") {
+        titulo.innerHTML = "Donaciones";
+        texto.innerHTML = "O.R.C.A. es una Organización sin ánimo de lucro, en ningún momento se generan ingresos para los miembros de la fundación, antes por el contrario, el mayor porcentaje de los mismos, deben aportar una cuota mensual para el mantenimiento de la institución y para poder cancelar los gastos que se derivan de las atenciones de los perros y gatos.";
+        btnPrincipal.style.backgroundImage = "url('img/Componente 12– 1.png')";
+
+        btnColaboracion1.style.paddingTop = 12;
+        btnColaboracion1.style.backgroundColor = "rgb(253, 198, 32)";
+        btnColaboracion2.style.paddingTop = 12;
+        btnColaboracion2.style.backgroundColor = "rgb(253, 198, 32)";
+        btnColaboracion3.style.paddingTop = 20;
+        btnColaboracion3.style.backgroundColor = "rgb(237,181,14)";
+    }
+}

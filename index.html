@@ -43,7 +43,7 @@
     </section>
     <!-- Orca -->
     <section id="seccion-orca" class="orca oculto">
-        <img id="Volver-orca" class="boton" src="img/volver.png" alt="volver" onclick="cambiarSeccion(3);">
+        <img class="btn-volver boton" src="img/volver.png" alt="volver" onclick="cambiarSeccion(3);">
         <img id="logo-orca" src="img/Enmascarar grupo 1.png" alt="logo">
         <div id="panel-orca">
             <h4 id="h4-orca" class="texto-orca">¿Que es Orca?</h4>
@@ -72,40 +72,45 @@
                 </div>
             </div>
             <h4>¿Como ayudar?</h4>
-            <div class="btn-orca boton" onclick="cambiarSeccion(5);">Plan padrino</div>
-            <div class="btn-orca boton" onclick="cambiarSeccion(5);">Voluntariado</div>
-            <div class=" btn-orca boton " onclick="cambiarSeccion(5);">Donaciones</div>
+            <div class="btn-orca boton" onclick="MostrarColaboraciones('Plan padrino'),cambiarSeccion(5);">Plan padrino</div>
+            <div class="btn-orca boton" onclick="MostrarColaboraciones('Voluntariado'),cambiarSeccion(5)">Voluntariado</div>
+            <div class="btn-orca boton" onclick="MostrarColaboraciones('Donaciones'),cambiarSeccion(5)">Donaciones</div>
         </div>
     </section>
     <!-- Colaboraciones -->
     <section id="seccion-colaboraciones" class="colaboraciones oculto">
-        <img class="boton" src="img/volver.png" alt="volver" onclick="cambiarSeccion(4);">
+        <img id="fondo-colaboraciones" src="img/Trazado 451.png" alt="fondo">
+        <img class="btn-volver" src="img/volver.png" alt="volver" onclick="cambiarSeccion(4);">
+        <div id="contenedor-colaboraciones">
+            <h1 id="titulo-colaboraciones"></h1>
+            <p id="p-colaboraciones"></p>
+        </div>
+        <div id="btnPrincipal-colaboraciones" class="boton" onclick="cambiarSeccion(8)"></div>
+        <div id="contenedorBtn-colaboraciones">
+            <div id="btnColaboracion1" class="btn-colaboracion boton" onclick="MostrarColaboraciones('Plan padrino'),cambiarSeccion(5)">Plan padrino</div>
+            <div id="btnColaboracion2" class="btn-colaboracion boton" onclick="MostrarColaboraciones('Voluntariado'),cambiarSeccion(5)">Voluntariado</div>
+            <div id="btnColaboracion3" class="btn-colaboracion boton" onclick="MostrarColaboraciones('Donaciones'),cambiarSeccion(5)">Donaciones</div>
+        </div>
     </section>
     <!-- Adopciones -->
     <section id="seccion-adopciones" class="adopciones oculto">
-        <img class="boton" src="img/volver.png" alt="volver" onclick="cambiarSeccion(3);">
+        <img class="btn-volver" src="img/volver.png " alt="volver" onclick="cambiarSeccion(3);">
     </section>
     <!-- Ayudas -->
     <section id="seccion-ayudas" class="ayudas oculto">
-        <img class="boton" src="img/volver.png" alt="volver" onclick="cambiarSeccion(3);">
-    </section>
-    <!-- Créditos / Autores -->
-    <section id="seccion-creditos" class="creditos oculto">
+        <img class="btn-volver" src="img/volver.png " alt="volver" onclick="cambiarSeccion(3);">
+        <h1 id="h1-ayudas">Mi gato positivo</h1>
+        <img id="img-ayudas" src="img/Componente 13 – 1.png" alt="casa">
+        <div id="panel-ayudas">
 
+        </div>
     </section>
-    <!-- Instrucciones -->
-    <section id="seccion-instrucciones" class="instrucciones oculto">
-
+    <!-- Formulario -->
+    <section id="seccion-formulario" class="formulario oculto">
+        <img class="btn-volver boton" src="img/volver.png" alt="volver" onclick="cambiarSeccion(5);">
+        <img id="fondo1-formulario" src="img/Trazado 449.png" alt="fondo1">
+        <img id="fondo2-formulario" src="img/Trazado 448.png" alt="fondo2">
     </section>
-    <div id="ventana" class="ventanaAyuda-juego oculto">
-        <div id="fondo-ventanaAyuda ">
-        </div>
-        <div id="panel-ayuda "></div>
-        <div id="cerrar ">
-        </div>
-        <div id="imagenAyuda " class="imagen-ayuda ">
-        </div>
-    </div>
 </body>
 
 </html>
