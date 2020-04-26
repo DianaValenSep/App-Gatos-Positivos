@@ -12,6 +12,14 @@ section {
     text-align: center;
 }
 
+a {
+    color: black;
+}
+
+p {
+    text-align: left;
+}
+
 .splash {
     background: white;
 }
@@ -232,11 +240,62 @@ section {
 }
 
 .adopciones {
-    background: blue;
+    background: rgb(253, 198, 32);
 }
 
 #seccion-adopciones {
     position: relative;
+}
+
+#titulo-adopciones {
+    position: relative;
+    margin: auto;
+    top: 8%;
+}
+
+#panel-adopciones {
+    background-color: white;
+    width: 100%;
+    height: 66%;
+    position: absolute;
+    top: 34%;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+}
+
+#p-adopciones {
+    position: absolute;
+    right: 25px;
+    top: 5%;
+}
+
+#contenedorFiltros-adopciones {
+    position: absolute;
+    width: 20%;
+    top: 10%;
+    right: 15px;
+    background-color: rgb(255, 252, 235);
+    border-radius: 15%;
+    text-align: right;
+    padding: 10px;
+}
+
+#img-adopciones {
+    position: absolute;
+    right: 15px;
+    top: 15%;
+}
+
+#img2-adopciones {
+    position: absolute;
+    left: 35px;
+    top: 15%;
+}
+
+#contenedor-adopciones {
+    position: absolute;
+    width: 100%;
+    top: 30%;
 }
 
 .ayudas {
@@ -247,7 +306,7 @@ section {
     position: relative;
 }
 
-#h1-ayudas {
+#titulo-ayudas {
     position: relative;
     margin: auto;
     top: 8%;
@@ -269,6 +328,36 @@ section {
     border-top-right-radius: 10%;
 }
 
+#h3-ayudas {
+    margin: 40px;
+}
+
+#contenedorTexto-ayudas {
+    position: absolute;
+    left: 0px;
+    width: 60%;
+}
+
+#contenedorBtn-ayudas {
+    position: absolute;
+    right: 0px;
+    width: 32%;
+}
+
+.btn-ayudas {
+    margin-bottom: 22%;
+    margin-top: 22%;
+    background-color: rgb(253, 198, 32);
+    padding: 5px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.texto-ayudas {
+    margin: 10px;
+    margin-bottom: 20px;
+}
+
 .formulario {
     background-color: white;
 }
@@ -277,12 +366,152 @@ section {
     position: relative;
 }
 
+#p-formulario {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+#formulario-formulario {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+}
+
+#contenedor-formulario {
+    width: 91%;
+    margin: auto;
+}
+
+#nombres-formulario {
+    margin-bottom: 15px;
+    width: 75%;
+}
+
+#apellidos-formulario {
+    margin-bottom: 15px;
+    width: 75%;
+}
+
+#edad-formulario {
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+#tipoID-formulario {
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+#numDoc-formulario {
+    width: 98%;
+    margin-bottom: 15px;
+}
+
+#cel-formulario {
+    width: 79%;
+    margin-bottom: 15px;
+}
+
+#correo-formulario {
+    width: 98%;
+    margin-bottom: 15px;
+}
+
+#formulario {
+    width: 90%;
+    margin: auto;
+}
+
+#contenedorInfo-formulario {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    text-align: left;
+}
+
+#btnPrincipal-formulario {
+    position: absolute;
+    top: 500px;
+    right: 0px;
+    height: 61px;
+    width: 128px;
+    background-image: url(../img/Componente\ 19\ –\ 1.png);
+}
+
+.preguntas {
+    background-color: rgb(253, 198, 32);
+}
+
+#seccion-preguntas {
+    position: relative;
+}
+
+#titulo-preguntas {
+    position: relative;
+    top: 70px;
+}
+
+#img-preguntas {
+    position: absolute;
+    top: 8%;
+}
+
+#contenedorBtn-preguntas {
+    position: relative;
+    top: 22%;
+    margin: auto;
+}
+
+.btn-preguntas {
+    background-color: rgb(237, 181, 14);
+    text-decoration: none;
+    display: inline-block;
+    margin: 1%;
+    width: 85px;
+    padding: 5px;
+    padding-top: 10px;
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+}
+
+#contenedorRespuesta-preguntas {
+    margin: auto;
+    width: 80%;
+    padding-bottom: 10px;
+}
+
+.titulo-preguntas {
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+#panel-preguntas {
+    background-color: white;
+    width: 100%;
+    height: fit-content;
+    position: absolute;
+    top: 31%;
+    border-top-left-radius: 8%;
+    border-top-right-radius: 8%;
+}
+
 .btn-volver {
     position: absolute;
     top: 10px;
     right: 0px;
     height: 24px;
     width: 110px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.btn-volver1 {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    height: 24px;
+    width: 69px;
     z-index: 3;
     cursor: pointer;
 }
@@ -299,6 +528,206 @@ section {
     left: 0px;
     bottom: 0px;
     width: 100%;
+}
+
+.tips {
+    background-color: rgb(253, 198, 32);
+}
+
+#seccion-tips {
+    position: relative;
+}
+
+#titulo-tips {
+    position: relative;
+    top: 11%;
+}
+
+#panel-tips {
+    background-color: white;
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    top: 20%;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+}
+
+#contenedorTips-tips {
+    margin: auto;
+    width: 80%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.contactos {
+    background-color: white;
+}
+
+#seccion-contactos {
+    position: relative;
+}
+
+#fondo-contactos {
+    width: 100%;
+}
+
+#img-contactos {
+    position: absolute;
+    top: 11%;
+    right: 0px;
+}
+
+#contenedor-contactos {
+    margin-top: 15px;
+    width: 80%;
+    margin: auto;
+    height: fit-content;
+}
+
+.contenedorDoc-contactos {
+    position: relative;
+    margin-top: 10px;
+}
+
+#contenedorCats-adopciones {
+    width: 90%;
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+.contenedorCat-adopciones {
+    position: relative;
+    margin-top: 10px;
+}
+
+.cat-adopciones {
+    position: absolute;
+    top: 5%;
+    left: 28%;
+    z-index: 1;
+}
+
+.fondoCat {
+    display: inline;
+    position: absolute;
+    background-color: rgb(255, 248, 212);
+    top: 5%;
+    left: 10%;
+    height: 85%;
+    width: 90%;
+    border-top-right-radius: 10%;
+    border-bottom-right-radius: 10%;
+}
+
+.infoCat-adopciones {
+    position: relative;
+    display: inline-block;
+    width: 22%;
+    text-align: left;
+    vertical-align: text-top;
+}
+
+.h5-adopciones {
+    margin: 5px;
+}
+
+.imgCat-adopciones {
+    position: relative;
+    width: 113px;
+    height: 113px;
+    display: inline-block;
+    border-radius: 100%;
+    background-position: center;
+    background-size: cover;
+    vertical-align: middle;
+    z-index: 1;
+}
+
+#imgCat1-adopciones {
+    background-image: url(../img/Grupo\ 154.png);
+}
+
+#imgCat2-adopciones {
+    background-image: url(../img/Grupo\ 169.png);
+}
+
+.infoCat2-adopciones {
+    display: inline-block;
+    text-align: right;
+    width: 40%;
+    vertical-align: text-top;
+    position: relative;
+}
+
+#contenedorTitulo-contactos {
+    position: absolute;
+    margin: auto;
+    top: 5%;
+    width: 100%;
+}
+
+#contenedorContactos-contactos {
+    width: 100%;
+    margin: auto;
+    background-color: white;
+    padding-bottom: 10px;
+}
+
+.imgDoc-contactos {
+    position: relative;
+    width: 113px;
+    height: 113px;
+    display: inline-block;
+    border-radius: 100%;
+    background-position: center;
+    background-size: cover;
+    vertical-align: middle;
+    z-index: 1;
+}
+
+.fondoDoc {
+    display: inline;
+    background-color: rgb(255, 248, 212);
+    padding: 9px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-top-right-radius: 10%;
+    border-bottom-right-radius: 10%;
+}
+
+.fondoDoc2 {
+    display: inline;
+    position: absolute;
+    background-color: rgb(255, 248, 212);
+    top: 17px;
+    left: 20px;
+    height: 77px;
+    width: 220px;
+}
+
+.infoDoc-contactos {
+    position: relative;
+    width: 40%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.horaDoc-contactos {
+    display: inline-block;
+    text-align: center;
+    width: auto;
+    vertical-align: middle;
+    position: relative;
+}
+
+#imgDoc1 {
+    background-image: url(../img/Elipse\ 71.png);
+}
+
+.titular-adopciones {
+    display: inline-block;
+    vertical-align: super;
 }
 
 .boton {

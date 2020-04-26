@@ -15,6 +15,9 @@ function inicializarReferencias() {
     secciones[6] = document.getElementById("seccion-adopciones");
     secciones[7] = document.getElementById("seccion-ayudas");
     secciones[8] = document.getElementById("seccion-formulario");
+    secciones[9] = document.getElementById("seccion-preguntas");
+    secciones[10] = document.getElementById("seccion-tips");
+    secciones[11] = document.getElementById("seccion-contactos");
 }
 
 function cambiarSplash() {
@@ -130,5 +133,79 @@ function MostrarColaboraciones(id_colaboracion) {
         btnColaboracion2.style.backgroundColor = "rgb(253, 198, 32)";
         btnColaboracion3.style.paddingTop = 20;
         btnColaboracion3.style.backgroundColor = "rgb(237,181,14)";
+    }
+}
+
+/* Funcniones - formularios ------------------------------------------------------*/
+function MostrarFormulario(id_formulario) {
+    let img = document.getElementById("masInfo-formulario");
+    let formulario = document.getElementById("formulario");
+    let formulario2 = document.getElementById("formulario-formulario");
+    let p = document.getElementById("p-formulario");
+    let p2 = document.getElementById("p2-formulario");
+    let h1 = document.getElementById("h1-formulario");
+    let btn = document.getElementById("btnPrincipal-formulario");
+    if (id_formulario == "Plan padrino") {
+        formulario2.style.top = "14%";
+        formulario.classList.remove("oculto");
+        p.classList.remove("oculto");
+        p.innerHTML = "El padrino hace una inscripción y se encarga de hacer un acompañamiento de su ahijado, dotándolo de una cuota, por medio de la cual, garantizamos su alimentación y atenciones veterinarias; dicha cuota es flexible y permite, brindarle al peludo , todo lo que requiere.";
+        p2.classList.add("oculto");
+        h1.classList.add("oculto");
+        img.setAttribute("src", "img/Componente 16 – 1.png");
+        btn.classList.remove("oculto");
+        btn.style.width = "128px";
+        btn.style.height = "61px";
+        btn.style.right = "0px";
+        btn.style.backgroundImage = "url('img/Componente\ 19\ –\ 1.png')";
+        btn.classList.add("boton");
+    } else if (id_formulario == "Voluntariado") {
+        img.setAttribute("src", "img/Componente 18 – 1.png");
+        formulario2.style.top = "30%";
+        formulario2.classList.remove("oculto");
+        formulario.classList.remove("oculto");
+        p.classList.add("oculto");
+        p2.classList.add("oculto");
+        h1.classList.add("oculto");
+        btn.classList.remove("oculto");
+        btn.style.right = "0px";
+        btn.style.width = "128px";
+        btn.style.height = "61px";
+        btn.style.backgroundImage = "url('img/Componente\ 19\ –\ 1.png')";
+        btn.classList.add("boton");
+    } else if (id_formulario == "Donaciones") {
+        img.setAttribute("src", "img/Componente 17 – 1.png");
+        formulario.classList.add("oculto");
+        formulario2.style.top = "14%";
+        p.classList.remove("oculto");
+        p.innerHTML = "El 80% de la financiación de O.R.C.A. proviene de las donaciones que las personas que conocen la labor de la institución, otorgan a la misma; ello, porque las cuentas de lo atendido en los diferentes centros veterinarios (como el Centro Veterinario El Poblado), son expuestas para la revisión y conocimiento de todos los integrantes. A la fecha, O.R.C.A. adeuda al CVP una suma de aproximadamente $18.000.000 (dieciocho millones de pesos)."
+        p.style.marginBottom = "5%"
+        p2.classList.remove("oculto");
+        p2.innerHTML = "Puedes ayudar con tu aporte a la cuenta de Ahorros Bancolombia:";
+        p2.style.width = "80%";
+        p2.style.margin = "auto";
+        p2.style.marginBottom = "5%"
+        h1.classList.remove("oculto");
+        h1.innerHTML = "Fundación ORCA 09759529224";
+        h1.style.width = "80%";
+        h1.style.margin = "auto";
+        btn.style.width = "93px";
+        btn.style.height = "73px";
+        btn.style.right = "15%";
+        btn.style.backgroundImage = "url('img/Enmascarar\ grupo\ 7.png')";
+        btn.classList.remove("boton");
+    } else if (id_formulario == "submit") {
+        h1.innerHTML = "¡Gracias!";
+        h1.classList.remove("oculto");
+        p.classList.remove("oculto");
+        p.innerHTML = "Te estaremos respondiendo la solicitud en tu correo electronico";
+        p2.classList.remove("oculto");
+        p2.innerHTML = "correoingresado@gmail.com";
+        btn.style.backgroundImage = "url('img/Componente\ 20\ –\ 1.png')";
+        formulario.classList.add("oculto");
+        formulario2.style.top = "30%";
+        p2.style.width = "80%";
+        p2.style.margin = "auto";
+        p2.style.marginBottom = "5%"
     }
 }
