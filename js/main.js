@@ -18,6 +18,9 @@ function inicializarReferencias() {
     secciones[9] = document.getElementById("seccion-preguntas");
     secciones[10] = document.getElementById("seccion-tips");
     secciones[11] = document.getElementById("seccion-contactos");
+    secciones[12] = document.getElementById("seccion-informacion");
+    secciones[13] = document.getElementById("seccion-instrucciones");
+    secciones[14] = document.getElementById("seccion-tramite");
 }
 
 function cambiarSplash() {
@@ -145,6 +148,10 @@ function MostrarFormulario(id_formulario) {
     let p2 = document.getElementById("p2-formulario");
     let h1 = document.getElementById("h1-formulario");
     let btn = document.getElementById("btnPrincipal-formulario");
+    let btnCopia = document.getElementById("btnCopia-formulario");
+    let volver1 = document.getElementById("volver-1");
+    let volver2 = document.getElementById("volver-2");
+    let masInfo = document.getElementById("masInfo-formulario");
     if (id_formulario == "Plan padrino") {
         formulario2.style.top = "14%";
         formulario.classList.remove("oculto");
@@ -159,6 +166,10 @@ function MostrarFormulario(id_formulario) {
         btn.style.right = "0px";
         btn.style.backgroundImage = "url('img/Componente\ 19\ –\ 1.png')";
         btn.classList.add("boton");
+        volver1.classList.remove("oculto");
+        volver2.classList.add("oculto");
+        btn.classList.remove("oculto");
+        btnCopia.classList.add("oculto");
     } else if (id_formulario == "Voluntariado") {
         img.setAttribute("src", "img/Componente 18 – 1.png");
         formulario2.style.top = "30%";
@@ -173,6 +184,10 @@ function MostrarFormulario(id_formulario) {
         btn.style.height = "61px";
         btn.style.backgroundImage = "url('img/Componente\ 19\ –\ 1.png')";
         btn.classList.add("boton");
+        volver1.classList.remove("oculto");
+        volver2.classList.add("oculto");
+        btn.classList.remove("oculto");
+        btnCopia.classList.add("oculto");
     } else if (id_formulario == "Donaciones") {
         img.setAttribute("src", "img/Componente 17 – 1.png");
         formulario.classList.add("oculto");
@@ -194,6 +209,10 @@ function MostrarFormulario(id_formulario) {
         btn.style.right = "15%";
         btn.style.backgroundImage = "url('img/Enmascarar\ grupo\ 7.png')";
         btn.classList.remove("boton");
+        volver1.classList.remove("oculto");
+        volver2.classList.add("oculto");
+        btn.classList.remove("oculto");
+        btnCopia.classList.add("oculto");
     } else if (id_formulario == "submit") {
         h1.innerHTML = "¡Gracias!";
         h1.classList.remove("oculto");
@@ -207,5 +226,27 @@ function MostrarFormulario(id_formulario) {
         p2.style.width = "80%";
         p2.style.margin = "auto";
         p2.style.marginBottom = "5%"
+        volver1.classList.remove("oculto");
+        volver2.classList.add("oculto");
+        btn.classList.remove("oculto");
+        btnCopia.classList.add("oculto");
+    } else {
+        h1.innerHTML = "¡Gracias!";
+        h1.classList.remove("oculto");
+        p.classList.remove("oculto");
+        p.innerHTML = "Te estaremos respondiendo la solicitud en tu correo electronico";
+        p2.classList.remove("oculto");
+        p2.innerHTML = "correoingresado@gmail.com";
+        btn.style.backgroundImage = "url('img/Componente\ 20\ –\ 1.png')";
+        formulario.classList.add("oculto");
+        formulario2.style.top = "30%";
+        p2.style.width = "80%";
+        p2.style.margin = "auto";
+        p2.style.marginBottom = "5%";
+        volver2.classList.remove("oculto");
+        volver1.classList.add("oculto");
+        btn.classList.add("oculto");
+        btnCopia.classList.remove("oculto");
+        masInfo.setAttribute("src", "img/Componente\ 24\ –\ 1.png")
     }
 }
