@@ -250,3 +250,7 @@ function MostrarFormulario(id_formulario) {
         masInfo.setAttribute("src", "img/Componente\ 24\ –\ 1.png")
     }
 }
+function contactoVeterinario(numVeterinario){
+    var link='https://wa.me/'+numVeterinario;
+    alert(link);
+}

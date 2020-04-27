@@ -904,3 +904,6 @@ p {
 .oculto {
     display: none;
 }
+.sinestiloHiper{
+    text-decoration: none;
+}
