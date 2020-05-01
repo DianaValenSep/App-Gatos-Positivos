@@ -95,6 +95,94 @@ function RetrocederPagInfo() {
     }
 }
 
+/* Base de datos - Gatos ------------------------------------------------------*/
+
+let gatos = [
+	[
+		"cat1",
+		"sida",
+		"macho"
+    ],
+    [
+		"cat2",
+		"leucemia",
+		"hembra"
+    ],
+    [
+		"cat3",
+		"sida",
+		"macho"
+    ],
+    [
+		"cat4",
+		"leucemia",
+		"hembra"
+    ],
+    [
+		"cat5",
+		"sida",
+		"macho"
+    ],
+    [
+		"cat6",
+		"leucemia",
+		"hembra"
+    ],
+];
+
+/* Funciones - Filtrar ----------------------------------------------------------*/
+var machos = [];
+var hembras = [];
+var aux=0;
+for(var i=0;i<gatos.length;i++){
+    if(gatos[i][2]=="macho"){
+        machos.push(gatos[i][0]);
+    }
+    else{
+        hembras.push(gatos[i][0]);
+    }
+}
+
+function mostrarTodos() {
+    var cat1 = document.getElementById("cat1");
+    cat1.style.display='block';
+    var cat2 = document.getElementById("cat2");
+    cat2.style.display='block';
+    var cat3 = document.getElementById("cat3");
+    cat3.style.display='block';
+    var cat4 = document.getElementById("cat4");
+    cat4.style.display='block';
+    var cat5 = document.getElementById("cat5");
+    cat5.style.display='block';
+    var cat6 = document.getElementById("cat6");
+    cat6.style.display='block';
+}
+function mostrarMachos() {
+    for(var i=0;i<machos.length;i++){
+        var gato = document.getElementById(machos[i]);
+        if(gato.style.display=='none'){
+            gato.style.display='block';
+        }
+    }
+    for(var i=0;i<hembras.length;i++){
+        var gato = document.getElementById(hembras[i]);
+        gato.style.display='none';
+    }
+}
+function mostrarHembras() {
+
+    for(var i=0;i<hembras.length;i++){
+        var gato = document.getElementById(hembras[i]);
+        if(gato.style.display=='none'){
+            gato.style.display='block';
+        }
+    }
+    for(var i=0;i<machos.length;i++){
+        var gato = document.getElementById(machos[i]);
+        gato.style.display='none';
+    }
+}
+
 /* Funciones - colaboraciones ----------------------------------------------------------*/
 function MostrarColaboraciones(id_colaboracion) {
     let titulo = document.getElementById("titulo-colaboraciones");
@@ -139,7 +227,7 @@ function MostrarColaboraciones(id_colaboracion) {
     }
 }
 
-/* Funcniones - formularios ------------------------------------------------------*/
+/* Funciones - formularios ------------------------------------------------------*/
 function MostrarFormulario(id_formulario) {
     let img = document.getElementById("masInfo-formulario");
     let formulario = document.getElementById("formulario");
