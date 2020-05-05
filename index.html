@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="js/main.js"></script>
     <title>Positivo +</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("user_IyxfJjFwG7drfG590pAxG");
+        })();
+    </script>
 </head>
 
 <body>
@@ -481,54 +487,54 @@
     <!-- Tramite -->
     <section id="seccion-tramite" class="tramite oculto">
         <img class="btn-volver1 boton" src="img/volver1.png" alt="volver" onclick="cambiarSeccion(13);">
-        <h1 id="titulo-tramite">Formulario de adopcion</h1>
+        <h1 id="titulo-tramite">Formulario de adopción</h1>
         <div id="panel-tramite">
             <div id="contenedorCandi-tramite">
                 <h5 class="margen-informacion">DATOS DEL CANDIDATO</h5>
                 <form action="">
-                    <p>Nombres <input id="nombres-formulario" type="text"></p>
-                    <p>Apellidos <input id="apellidos-formulario" type="text"></p>
-                    <p id="edad-formulario">Edad <select>
+                    <p>Nombres <input id="nombresFormulario" type="text"></p>
+                    <p>Apellidos <input id="apellidosFormulario" type="text"></p>
+                    <p id="edadFormulario">Edad <select id="edadFormulario1">
                         <option>18-25</option>
                         <option>25-30</option>
                         <option>30-35</option>
                         <option>35-40</option>
                         <option>40+</option>
                     </select></p>
-                    <p id="tipoID-formulario">Tipo de documento <select>
+                    <p id="tipoIDFormulario">Tipo de documento <select id="tipoIDFormulario1">
                         <option>C.C</option>
                         <option>P.A</option>
                         <option>R.C</option>
                         <option>C.E</option>
                     </select>
                     </p>
-                    <p>Numero de documento <input id="numDoc-formulario" type="number"></p>
-                    <p>Celular <input id="cel-formulario" type="number"></p>
-                    <p>Correo electronico <input id="correo-formulario" type="text">
+                    <p>Numero de documento <input id="numDocFormulario" type="number"></p>
+                    <p>Celular <input id="celFormulario" type="number"></p>
+                    <p>Correo electrónico <input id="correoFormulario" type="text">
                     </p>
-                    <h5 class="margen-informacion">COMPOSICION DEL NUCLEO FAMILIAR</h5>
-                    <p class="margen-informacion">Numero de personas en la familia <select>
+                    <h5 class="margen-informacion">COMPOSICIÓN DEL NUCLEO FAMILIAR</h5>
+                    <p class="margen-informacion">Número de personas en la familia <select id="persFormulario">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
                         <option>5+</option>
                     </select></p>
-                    <p class="lineaSelect margen-informacion">Adultos <select>
+                    <p class="lineaSelect margen-informacion">Adultos <select id="adulFormulario">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
                         <option>5+</option>
                     </select></p>
-                    <p class="lineaSelect margen-informacion">Niños <select>
+                    <p class="lineaSelect margen-informacion">Niños <select id="ninFormulario">
                         <option>0</option>
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
                     </select></p>
-                    <p class="lineaSelect margen-informacion">Bebes <select>
+                    <p class="lineaSelect margen-informacion">Bebes <select id="bbsFormulario">
                         <option>0</option>
                         <option>1</option>
                         <option>2</option>
@@ -536,18 +542,17 @@
                         <option>4</option>
                     </select></p>
                     <h5 class="margen-informacion">DATOS IMPORTANTES</h5>
-                    <p class="margen-informacion">¿Por qué quiere adoptar? <input type="text" class="w100"></p>
-                    <p class="margen-informacion">Si has tenido, cuéntanos de tu experiencia con los animales <input type="text" class="w100"></p>
-                    <p class="margen-informacion">¿Comparten esta decisión el resto de miembros del hogar? <input type="text" class="w100"></p>
-                    <p class="margen-informacion">¿Quién va a asumir los gastos derivados del animal? <input type="text" class="w100"></p>
-                    <p class="margen-informacion">¿Conoce los gastos que implica tener un animal? <input type="text" class="w100"></p>
-                    <p class="margen-informacion">¿Su vivienda tiene patio, terraza o jardín? Si es así, ¿es cubierto? <input type="text" class="w100"></p>
-                    <p class="margen-informacion">¿Es consiente de las sugerencias para adoptar gatos positivos? <input type="text" class="w100"></p>
+                    <p class="margen-informacion">¿Por qué quiere adoptar? <input id="pi1" type="text" class="w100"></p>
+                    <p class="margen-informacion">Si has tenido, cuéntanos de tu experiencia con los animales <input id="pi2" type="text" class="w100"></p>
+                    <p class="margen-informacion">¿Comparten esta decisión el resto de miembros del hogar? <input id="pi3" type="text" class="w100"></p>
+                    <p class="margen-informacion">¿Quién va a asumir los gastos derivados del animal? <input id="pi4" type="text" class="w100"></p>
+                    <p class="margen-informacion">¿Conoce los gastos que implica tener un animal? <input id="pi5" type="text" class="w100"></p>
+                    <p class="margen-informacion">¿Su vivienda tiene patio, terraza o jardín? Si es así, ¿es cubierto? <input id="pi6" type="text" class="w100"></p>
+                    <p class="margen-informacion">¿Es consiente de las sugerencias para adoptar gatos positivos? <input id="pi7" type="text" class="w100"></p>
                 </form>
-                <img id="enviar-tramite" class="boton" src="img/Componente 23 – 1.png" alt="submit" onclick="MostrarFormulario('.'),cambiarSeccion(8)">
+                <img id="enviar-tramite" class="boton" src="img/Componente 23 – 1.png" alt="submit" onclick="MostrarFormulario('.'),cambiarSeccion(8),enviarCorreo()">
             </div>
         </div>
     </section>
 </body>
-
 </html>
