@@ -383,37 +383,37 @@ p {
     margin: auto;
 }
 
-#nombres-formulario {
+#nombresFormulario {
     margin-bottom: 15px;
     width: 75%;
 }
 
-#apellidos-formulario {
+#apellidosFormulario {
     margin-bottom: 15px;
     width: 75%;
 }
 
-#edad-formulario {
+#edadFormulario {
     display: inline-block;
     margin-bottom: 15px;
 }
 
-#tipoID-formulario {
+#tipoIDFormulario {
     display: inline-block;
     margin-bottom: 15px;
 }
 
-#numDoc-formulario {
+#numDocFormulario {
     width: 98%;
     margin-bottom: 15px;
 }
 
-#cel-formulario {
+#celFormulario {
     width: 79%;
     margin-bottom: 15px;
 }
 
-#correo-formulario {
+#correoFormulario {
     width: 98%;
     margin-bottom: 15px;
 }
