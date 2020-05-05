@@ -342,3 +342,32 @@ function contactoVeterinario(numVeterinario){
     var link='https://wa.me/'+numVeterinario;
     alert(link);
 }
+
+function enviarCorreo() {
+    var template_Params = {
+        "ans_1": document.getElementById("nombresFormulario").value,
+        "ans_2": document.getElementById("apellidosFormulario").value,
+        "ans_3": document.getElementById("edadFormulario1").value,
+        "ans_4": document.getElementById("tipoIDFormulario1").value,
+        "ans_5": document.getElementById("numDocFormulario").value,
+        "ans_6": document.getElementById("celFormulario").value,
+        "ans_7": document.getElementById("correoFormulario").value,
+        "ans_8": document.getElementById("persFormulario").value,
+        "ans_9": document.getElementById("adulFormulario").value,
+        "ans_10": document.getElementById("ninFormulario").value,
+        "ans_11": document.getElementById("bbsFormulario").value,
+        "ans_12": document.getElementById("pi1").value,
+        "ans_13": document.getElementById("pi2").value,
+        "ans_14": document.getElementById("pi3").value,
+        "ans_15": document.getElementById("pi4").value,
+        "ans_16": document.getElementById("pi5").value,
+        "ans_17": document.getElementById("pi6").value,
+        "ans_18": document.getElementById("pi7").value
+     }
+    emailjs.send('default_service', 'form', template_Params)
+    .then(function(response) {
+       console.log('SUCCESS!', response.status, response.text);
+    }, function(error) {
+       console.log('FAILED...', error);
+    });
+}
