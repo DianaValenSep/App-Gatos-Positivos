@@ -384,3 +384,42 @@ function CorreoAyudas(){
     });
 
 }
+function enviarNombreGato(nombreGato){
+    /*Cuando nos pasen las imagenes de los demás gatos se puede modificar la imagen desde acá*/
+    let edad = document.getElementById("edad-informacion");
+    let positivoinfo=document.getElementById("positivo-informacion");
+    let texto1=document.getElementById("texto1-informacion");
+    let texto2=document.getElementById("texto2-informacion");
+    if (nombreGato=="Mulan"){
+        edad.innerHTML="7 meses";
+        positivoinfo.innerHTML="Positivo a Sida";
+        texto1.innerHTML="Mulán fue encontrada en una construcción con sus otros 3 hermanitos, es la mayor y la única hembra, su mamá tenía sida por lo cuál esta preciosa es positiva también."; 
+        texto2.innerHTML="Es muy tierna y calmada, busca una familia que la adopte";
+    }else if(nombreGato=="Bethoven"){
+        edad.innerHTML="24 meses";
+        positivoinfo.innerHTML="Positivo a leucemia";
+        texto1.innerHTML="Fue encontrado en una plaza de mercado en una caja con su hermanita, es el menor."; 
+        texto2.innerHTML="Es algo asustadizo pero le gusta jugar con su hermana y es amigable";
+        
+    }else if(nombreGato=="Fifi"){
+        edad.innerHTML="15 meses";
+        positivoinfo.innerHTML="Positivo a leucemia";
+        texto1.innerHTML="Fue encontrado en una plaza de mercado en una caja con su hermanito, es el mayor y su hermano también esta en adopción."; 
+        texto2.innerHTML="Es super activa, juega continuamente con su hermano también positivo.";
+    }else if(nombreGato=="Eliot"){
+        edad.innerHTML="3 meses";
+        positivoinfo.innerHTML="Positivo a sida";
+        texto1.innerHTML="Eliot es un gato muy especial, ya que no solo es positivo sino que también es un gato muy divertido, debido a un tic que tiene en su cabecita."; 
+        texto2.innerHTML="Fue rescatado de una familia que lo maltrataba, es positivo de nacimiento.";
+    }else if(nombreGato=="Petunia"){
+        edad.innerHTML="13 meses";
+        positivoinfo.innerHTML="Positivo a sida";
+        texto1.innerHTML="Petunia es dulce como las flores y le encanta jugar con sus hermanitos."; 
+        texto2.innerHTML="Es la menor de 4 hermanitos y fueron encontrados en la puerta de una veterinaria.";
+    }else{
+        edad.innerHTML="9 meses";
+        positivoinfo.innerHTML="Positivo a sida";
+        texto1.innerHTML="Fue encontrado en una plaza de mercado en una caja con su hermanito, es el mayor."; 
+        texto2.innerHTML="Es super activo, juega continuamente con su hermano también positivo.";
+    }
+}

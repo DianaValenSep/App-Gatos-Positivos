@@ -660,6 +660,7 @@ p {
 #imgCat2-adopciones {
     background-image: url(../img/Grupo\ 169.png);
 }
+/*la idea es agregar acá las imagenes de más gatos*/
 
 .infoCat2-adopciones {
     display: inline-block;
@@ -732,7 +733,8 @@ p {
 
 #imgDoc1 {
     background-image: url(../img/Elipse\ 71.png);
-}
+} 
+/*Acá va las imagenes de los veterinarios modificando el id de cada imagen imgDoc2...*/
 
 .titular-adopciones {
     display: inline-block;
