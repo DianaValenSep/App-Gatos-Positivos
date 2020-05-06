@@ -338,11 +338,6 @@ function MostrarFormulario(id_formulario) {
         masInfo.setAttribute("src", "img/Componente\ 24\ –\ 1.png")
     }
 }
-function contactoVeterinario(numVeterinario){
-    var link='https://wa.me/'+numVeterinario;
-    alert(link);
-}
-
 function enviarCorreo() {
     var template_Params = {
         "ans_1": document.getElementById("nombresFormulario").value,
@@ -370,4 +365,22 @@ function enviarCorreo() {
     }, function(error) {
        console.log('FAILED...', error);
     });
+}
+function CorreoAyudas(){
+    var template_params={
+        "ans_1": document.getElementById("nombres-formulario").value,
+        "ans_2": document.getElementById("apellidos-formulario").value,
+        "ans_3": document.getElementById("edad-formulario").value,
+        "ans_4": document.getElementById("tipoID-formulario").value,
+        "ans_5": document.getElementById("numDoc-formulario").value,
+        "ans_6": document.getElementById("cel-formulario").value,
+        "ans_7": document.getElementById("correo-formulario").value
+    }
+    emailjs.send('default_service','template_yXd6ASi0',template_params)
+    .then(function(response) {
+       console.log('SUCCESS!', response.status, response.text);
+    }, function(error) {
+       console.log('FAILED...', error);
+    });
+
 }
