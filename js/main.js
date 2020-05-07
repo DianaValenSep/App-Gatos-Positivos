@@ -1,6 +1,7 @@
 var secciones = [];
 var tiempo_splash = 2500;
 var tiempo_nivel = 1000;
+var contadorGatos;
 window.onload = function() {
     inicializarReferencias();
     setTimeout(cambiarSplash, tiempo_splash);
@@ -95,6 +96,94 @@ function RetrocederPagInfo() {
     }
 }
 
+/* Base de datos - Gatos ------------------------------------------------------*/
+
+let gatos = [
+	[
+		"cat1",
+		"sida",
+		"macho"
+    ],
+    [
+		"cat2",
+		"leucemia",
+		"hembra"
+    ],
+    [
+		"cat3",
+		"sida",
+		"macho"
+    ],
+    [
+		"cat4",
+		"leucemia",
+		"hembra"
+    ],
+    [
+		"cat5",
+		"sida",
+		"macho"
+    ],
+    [
+		"cat6",
+		"leucemia",
+		"hembra"
+    ],
+];
+
+/* Funciones - Filtrar ----------------------------------------------------------*/
+var machos = [];
+var hembras = [];
+var aux=0;
+for(var i=0;i<gatos.length;i++){
+    if(gatos[i][2]=="macho"){
+        machos.push(gatos[i][0]);
+    }
+    else{
+        hembras.push(gatos[i][0]);
+    }
+}
+
+function mostrarTodos() {
+    var cat1 = document.getElementById("cat1");
+    cat1.style.display='block';
+    var cat2 = document.getElementById("cat2");
+    cat2.style.display='block';
+    var cat3 = document.getElementById("cat3");
+    cat3.style.display='block';
+    var cat4 = document.getElementById("cat4");
+    cat4.style.display='block';
+    var cat5 = document.getElementById("cat5");
+    cat5.style.display='block';
+    var cat6 = document.getElementById("cat6");
+    cat6.style.display='block';
+}
+function mostrarMachos() {
+    for(var i=0;i<machos.length;i++){
+        var gato = document.getElementById(machos[i]);
+        if(gato.style.display=='none'){
+            gato.style.display='block';
+        }
+    }
+    for(var i=0;i<hembras.length;i++){
+        var gato = document.getElementById(hembras[i]);
+        gato.style.display='none';
+    }
+}
+function mostrarHembras() {
+
+    for(var i=0;i<hembras.length;i++){
+        var gato = document.getElementById(hembras[i]);
+        if(gato.style.display=='none'){
+            gato.style.display='block';
+        }
+    }
+    for(var i=0;i<machos.length;i++){
+        var gato = document.getElementById(machos[i]);
+        gato.style.display='none';
+    }
+}
+
 /* Funciones - colaboraciones ----------------------------------------------------------*/
 function MostrarColaboraciones(id_colaboracion) {
     let titulo = document.getElementById("titulo-colaboraciones");
@@ -139,7 +228,7 @@ function MostrarColaboraciones(id_colaboracion) {
     }
 }
 
-/* Funcniones - formularios ------------------------------------------------------*/
+/* Funciones - formularios ------------------------------------------------------*/
 function MostrarFormulario(id_formulario) {
     let img = document.getElementById("masInfo-formulario");
     let formulario = document.getElementById("formulario");
@@ -249,4 +338,170 @@ function MostrarFormulario(id_formulario) {
         btnCopia.classList.remove("oculto");
         masInfo.setAttribute("src", "img/Componente\ 24\ –\ 1.png")
     }
+}
+function enviarCorreo() {
+    var template_Params = {
+        "ans_1": document.getElementById("nombresFormulario").value,
+        "ans_2": document.getElementById("apellidosFormulario").value,
+        "ans_3": document.getElementById("edadFormulario1").value,
+        "ans_4": document.getElementById("tipoIDFormulario1").value,
+        "ans_5": document.getElementById("numDocFormulario").value,
+        "ans_6": document.getElementById("celFormulario").value,
+        "ans_7": document.getElementById("correoFormulario").value,
+        "ans_8": document.getElementById("persFormulario").value,
+        "ans_9": document.getElementById("adulFormulario").value,
+        "ans_10": document.getElementById("ninFormulario").value,
+        "ans_11": document.getElementById("bbsFormulario").value,
+        "ans_12": document.getElementById("pi1").value,
+        "ans_13": document.getElementById("pi2").value,
+        "ans_14": document.getElementById("pi3").value,
+        "ans_15": document.getElementById("pi4").value,
+        "ans_16": document.getElementById("pi5").value,
+        "ans_17": document.getElementById("pi6").value,
+        "ans_18": document.getElementById("pi7").value
+     }
+    emailjs.send('default_service', 'form', template_Params)
+    .then(function(response) {
+       console.log('SUCCESS!', response.status, response.text);
+    }, function(error) {
+       console.log('FAILED...', error);
+    });
+}
+function CorreoAyudas(){
+    var template_params={
+        "ans_1": document.getElementById("nombres-formulario").value,
+        "ans_2": document.getElementById("apellidos-formulario").value,
+        "ans_3": document.getElementById("edad-formulario").value,
+        "ans_4": document.getElementById("tipoID-formulario").value,
+        "ans_5": document.getElementById("numDoc-formulario").value,
+        "ans_6": document.getElementById("cel-formulario").value,
+        "ans_7": document.getElementById("correo-formulario").value
+    }
+    emailjs.send('default_service','template_yXd6ASi0',template_params)
+    .then(function(response) {
+       console.log('SUCCESS!', response.status, response.text);
+    }, function(error) {
+       console.log('FAILED...', error);
+    });
+
+}
+function enviarNombreGato(nombreGato){
+    /*Cuando nos pasen las imagenes de los demás gatos se puede modificar la imagen desde acá*/
+    let edad = document.getElementById("edad-informacion");
+    let positivoinfo=document.getElementById("positivo-informacion");
+    let texto1=document.getElementById("texto1-informacion");
+    let texto2=document.getElementById("texto2-informacion");
+    if (nombreGato=="Mulan"){
+        contadorGatos=1;
+        edad.innerHTML="7 meses";
+        positivoinfo.innerHTML="Positivo a Sida";
+        texto1.innerHTML="Mulán fue encontrada en una construcción con sus otros 3 hermanitos, es la mayor y la única hembra, su mamá tenía sida por lo cuál esta preciosa es positiva también."; 
+        texto2.innerHTML="Es muy tierna y calmada, busca una familia que la adopte";
+    }else if(nombreGato=="Bethoven"){
+        contadorGatos=2;
+        edad.innerHTML="24 meses";
+        positivoinfo.innerHTML="Positivo a leucemia";
+        texto1.innerHTML="Fue encontrado en una plaza de mercado en una caja con su hermanita, es el menor."; 
+        texto2.innerHTML="Es algo asustadizo pero le gusta jugar con su hermana y es amigable";
+        
+    }else if(nombreGato=="Fifi"){
+        contadorGatos=3;
+        edad.innerHTML="15 meses";
+        positivoinfo.innerHTML="Positivo a leucemia";
+        texto1.innerHTML="Fue encontrado en una plaza de mercado en una caja con su hermanito, es el mayor y su hermano también esta en adopción."; 
+        texto2.innerHTML="Es super activa, juega continuamente con su hermano también positivo.";
+    }else if(nombreGato=="Eliot"){
+        contadorGatos=4;
+        edad.innerHTML="3 meses";
+        positivoinfo.innerHTML="Positivo a sida";
+        texto1.innerHTML="Eliot es un gato muy especial, ya que no solo es positivo sino que también es un gato muy divertido, debido a un tic que tiene en su cabecita."; 
+        texto2.innerHTML="Fue rescatado de una familia que lo maltrataba, es positivo de nacimiento.";
+    }else if(nombreGato=="Petunia"){
+        contadorGatos=5;
+        edad.innerHTML="13 meses";
+        positivoinfo.innerHTML="Positivo a sida";
+        texto1.innerHTML="Petunia es dulce como las flores y le encanta jugar con sus hermanitos."; 
+        texto2.innerHTML="Es la menor de 4 hermanitos y fueron encontrados en la puerta de una veterinaria.";
+    }else{
+        contadorGatos=6;
+        edad.innerHTML="9 meses";
+        positivoinfo.innerHTML="Positivo a sida";
+        texto1.innerHTML="Fue encontrado en una plaza de mercado en una caja con su hermanito, es el mayor."; 
+        texto2.innerHTML="Es super activo, juega continuamente con su hermano también positivo.";
+    }
+}
+function SiguienteGato(){
+    let edad = document.getElementById("edad-informacion");
+    let positivoinfo=document.getElementById("positivo-informacion");
+    let texto1=document.getElementById("texto1-informacion");
+    let texto2=document.getElementById("texto2-informacion");
+    if(contadorGatos==1){
+        contadorGatos=2;
+        edad.innerHTML="24 meses";
+        positivoinfo.innerHTML="Positivo a leucemia";
+        texto1.innerHTML="Fue encontrado en una plaza de mercado en una caja con su hermanita, es el menor."; 
+        texto2.innerHTML="Es algo asustadizo pero le gusta jugar con su hermana y es amigable";
+    }else if(contadorGatos==2){
+        contadorGatos=3;
+        edad.innerHTML="15 meses";
+        positivoinfo.innerHTML="Positivo a leucemia";
+        texto1.innerHTML="Fue encontrado en una plaza de mercado en una caja con su hermanito, es el mayor y su hermano también esta en adopción."; 
+        texto2.innerHTML="Es super activa, juega continuamente con su hermano también positivo.";
+    }else if(contadorGatos==3){
+        contadorGatos=4;
+        edad.innerHTML="3 meses";
+        positivoinfo.innerHTML="Positivo a sida";
+        texto1.innerHTML="Eliot es un gato muy especial, ya que no solo es positivo sino que también es un gato muy divertido, debido a un tic que tiene en su cabecita."; 
+        texto2.innerHTML="Fue rescatado de una familia que lo maltrataba, es positivo de nacimiento.";
+    }else if(contadorGatos==4){
+        contadorGatos=5;
+        edad.innerHTML="13 meses";
+        positivoinfo.innerHTML="Positivo a sida";
+        texto1.innerHTML="Petunia es dulce como las flores y le encanta jugar con sus hermanitos."; 
+        texto2.innerHTML="Es la menor de 4 hermanitos y fueron encontrados en la puerta de una veterinaria.";
+    }else if (contadorGatos==5){
+        contadorGatos=6;
+        edad.innerHTML="9 meses";
+        positivoinfo.innerHTML="Positivo a sida";
+        texto1.innerHTML="Fue encontrado en una plaza de mercado en una caja con su hermanito, es el mayor."; 
+        texto2.innerHTML="Es super activo, juega continuamente con su hermano también positivo.";
+    }
+}
+function anteriorGato(){
+    let edad = document.getElementById("edad-informacion");
+    let positivoinfo=document.getElementById("positivo-informacion");
+    let texto1=document.getElementById("texto1-informacion");
+    let texto2=document.getElementById("texto2-informacion");
+    if (contadorGatos==6){
+        contadorGatos=5;
+        edad.innerHTML="13 meses";
+        positivoinfo.innerHTML="Positivo a sida";
+        texto1.innerHTML="Petunia es dulce como las flores y le encanta jugar con sus hermanitos."; 
+        texto2.innerHTML="Es la menor de 4 hermanitos y fueron encontrados en la puerta de una veterinaria.";
+    }else if(contadorGatos==5){
+        contadorGatos=4;
+        edad.innerHTML="3 meses";
+        positivoinfo.innerHTML="Positivo a sida";
+        texto1.innerHTML="Eliot es un gato muy especial, ya que no solo es positivo sino que también es un gato muy divertido, debido a un tic que tiene en su cabecita."; 
+        texto2.innerHTML="Fue rescatado de una familia que lo maltrataba, es positivo de nacimiento.";
+    }else if(contadorGatos==4){
+        contadorGatos=3;
+        edad.innerHTML="15 meses";
+        positivoinfo.innerHTML="Positivo a leucemia";
+        texto1.innerHTML="Fue encontrado en una plaza de mercado en una caja con su hermanito, es el mayor y su hermano también esta en adopción."; 
+        texto2.innerHTML="Es super activa, juega continuamente con su hermano también positivo.";
+    }else if(contadorGatos==3){
+        contadorGatos=2;
+        edad.innerHTML="24 meses";
+        positivoinfo.innerHTML="Positivo a leucemia";
+        texto1.innerHTML="Fue encontrado en una plaza de mercado en una caja con su hermanita, es el menor."; 
+        texto2.innerHTML="Es algo asustadizo pero le gusta jugar con su hermana y es amigable";
+    }else if(contadorGatos==2){
+        contadorGatos=1;
+        edad.innerHTML="7 meses";
+        positivoinfo.innerHTML="Positivo a Sida";
+        texto1.innerHTML="Mulán fue encontrada en una construcción con sus otros 3 hermanitos, es la mayor y la única hembra, su mamá tenía sida por lo cuál esta preciosa es positiva también."; 
+        texto2.innerHTML="Es muy tierna y calmada, busca una familia que la adopte";
+    }
+
 }

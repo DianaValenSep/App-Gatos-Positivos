@@ -4,6 +4,10 @@
 
 html {
     font-family: helvetica, sans-serif;
+    height: 100%;
+}
+body{
+    height: 100%;
 }
 
 section {
@@ -35,36 +39,43 @@ p {
 .info {
     background: rgb(253, 198, 32);
 }
-
+#seccion-info{
+    position: relative;
+}
 .indices-info {
     margin: 15px;
 }
 
 .imgComenzar-info {
-    position: relative;
-    top: 200px;
+margin-top: 30%;
 }
 
 #boton-info {
     position: absolute;
-    left: 330px;
+    right: 5px;
     top: 255px;
 }
 
 #botonizq-info {
     position: absolute;
-    left: 10px;
+    left: 5px;
     top: 255px;
 }
 
 #div-info {
     position: relative;
-    top: 80px;
-    margin: auto;
+    top: 10%;
+    margin: 0% 10%;
+    height: 55%;
     background-color: white;
-    width: 250px;
-    height: 400px;
     border-radius: 5%;
+}
+
+#contenedor-info{
+    align-content: center;
+    position: absolute;
+    width: 100%;
+    bottom: 10%;
 }
 
 #h1-info {
@@ -80,14 +91,14 @@ p {
 }
 
 #imgGato-info {
-    margin-top: 35px;
-    width: 190px;
-    height: 183px;
+    margin-top: 5%;
+    width: 55%;
+    height: 39%;
 }
 
 #indice-info {
     position: relative;
-    top: 130px;
+    top: 15%;
 }
 
 .home {
@@ -383,37 +394,37 @@ p {
     margin: auto;
 }
 
-#nombres-formulario {
+#nombresFormulario {
     margin-bottom: 15px;
     width: 75%;
 }
 
-#apellidos-formulario {
+#apellidosFormulario {
     margin-bottom: 15px;
     width: 75%;
 }
 
-#edad-formulario {
+#edadFormulario {
     display: inline-block;
     margin-bottom: 15px;
 }
 
-#tipoID-formulario {
+#tipoIDFormulario {
     display: inline-block;
     margin-bottom: 15px;
 }
 
-#numDoc-formulario {
+#numDocFormulario {
     width: 98%;
     margin-bottom: 15px;
 }
 
-#cel-formulario {
+#celFormulario {
     width: 79%;
     margin-bottom: 15px;
 }
 
-#correo-formulario {
+#correoFormulario {
     width: 98%;
     margin-bottom: 15px;
 }
@@ -660,6 +671,7 @@ p {
 #imgCat2-adopciones {
     background-image: url(../img/Grupo\ 169.png);
 }
+/*la idea es agregar acá las imagenes de más gatos*/
 
 .infoCat2-adopciones {
     display: inline-block;
@@ -732,7 +744,8 @@ p {
 
 #imgDoc1 {
     background-image: url(../img/Elipse\ 71.png);
-}
+} 
+/*Acá va las imagenes de los veterinarios modificando el id de cada imagen imgDoc2...*/
 
 .titular-adopciones {
     display: inline-block;
@@ -903,4 +916,18 @@ p {
 
 .oculto {
     display: none;
+}
+.sinestiloHiper{
+    text-decoration: none;
+}
+
+@media(max-width: 480px){
+    section{
+        width: 100%;
+    }
+}
+@media(max-height:850px){
+    section{
+        height: 100%;
+    }
 }

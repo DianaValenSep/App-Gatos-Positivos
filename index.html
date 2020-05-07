@@ -3,11 +3,17 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, height=device-heigth, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="js/main.js"></script>
-    <title>Single App</title>
+    <title>Positivo +</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("user_IyxfJjFwG7drfG590pAxG");
+        })();
+    </script>
 </head>
 
 <body>
@@ -28,7 +34,9 @@
             <img id="indice2-info" class="indices-info" src="img/Elipse 7.png" alt="imagen">
             <img id="indice3-info" class="indices-info" src="img/Elipse 7.png" alt="imagen">
         </div>
-        <img src="img/Grupo 311.png" id="imgSaltar" class="imgComenzar-info boton" alt="imagen" onclick="cambiarSeccion(3);">
+        <div id="contenedor-info">
+            <img src="img/Grupo 311.png" id="imgSaltar" class="imgComenzar-info boton" alt="imagen" onclick="cambiarSeccion(3);">    
+        </div>
         <img id="boton-info" class="boton" src="img/Grupo 32.png" alt="imagen" onclick="SiguientePagInfo();">
         <img id="botonizq-info" class="oculto boton" src="img/Grupo 33.png" alt="imagen" onclick="RetrocederPagInfo();">
 
@@ -99,16 +107,17 @@
         <img id="img-adopciones" src="img/Componente 14 – 1.png" alt="imagen">
         <div id="panel-adopciones">
             <img id="img2-adopciones" src="img/Componente 15 – 1.png" alt="positivo +">
-            <p id="p-adopciones">filtrar</p>
+            <p id="p-adopciones">Filtrar</p>
             <div id="contenedorFiltros-adopciones">
-                <a href="javascript:void();">Todos</a>
-                <a href="javascript:void();">Edades</a>
-                <a href="javascript:void();">Machos</a>
-                <a href="javascript:void();">Hembras</a>
+                <a href="javascript:mostrarTodos();">Todos</a>
+                <a href="javascript:mostrarMachos();">Hembras</a>
+                <a href="javascript:mostrarHembras();">Machos
+                    <!--No se asusten con el metodo que esta al contrario fue un error pequeño que preferí corregir asi jajajaj-->
+                </a>
             </div>
             <div id="contenedor-adopciones">
                 <div id="contenedorCats-adopciones">
-                    <div id="cat1" class="contenedorCat-adopciones boton" onclick="cambiarSeccion(12)">
+                    <div id="cat1" class="contenedorCat-adopciones boton" onclick="cambiarSeccion(12),enviarNombreGato('Mulan')">
                         <div id="imgCat1-adopciones" class="imgCat-adopciones"></div>
                         <div class="fondoCat"></div>
                         <div class="cat-adopciones">
@@ -122,15 +131,15 @@
                         </div>
                         <div class="infoCat2-adopciones">
                             <h5 class="h5-adopciones">Positivo a sida</h5>
-                            <h5 class="h5-adopciones">15 meses</h5>
+                            <h5 class="h5-adopciones">7 meses</h5>
                         </div>
                     </div>
-                    <div id="cat2" class="contenedorCat-adopciones boton" onclick="cambiarSeccion(12)">
+                    <div id="cat2" class="contenedorCat-adopciones boton" onclick="cambiarSeccion(12),enviarNombreGato('Bethoven')">
                         <div id="imgCat2-adopciones" class="imgCat-adopciones"></div>
                         <div class="fondoCat"></div>
                         <div class="cat-adopciones">
                             <img src="img/Grupo 359.png" alt="positivo">
-                            <h1 class="titular-adopciones">Eliot</h1>
+                            <h1 class="titular-adopciones">Bethoven</h1>
                             <img class="titular-adopciones" src="img/Grupo 254.png" alt="sexo">
                         </div>
                         <div class="infoCat-adopciones">
@@ -138,34 +147,17 @@
                             <h5 class="h5-adopciones">Edad</h5>
                         </div>
                         <div class="infoCat2-adopciones">
-                            <h5 class="h5-adopciones">Positivo a sida</h5>
-                            <h5 class="h5-adopciones">15 meses</h5>
+                            <h5 class="h5-adopciones">Positivo a leucemia</h5>
+                            <h5 class="h5-adopciones">24 meses</h5>
                         </div>
                     </div>
-                    <div id="cat3" class="contenedorCat-adopciones boton" onclick="cambiarSeccion(12)">
+                    <div id="cat3" class="contenedorCat-adopciones boton" onclick="cambiarSeccion(12),enviarNombreGato('Fifi')">
                         <div id="imgCat1-adopciones" class="imgCat-adopciones"></div>
                         <div class="fondoCat"></div>
                         <div class="cat-adopciones">
                             <img src="img/Grupo 359.png" alt="positivo">
-                            <h1 class="titular-adopciones">Mulan</h1>
+                            <h1 class="titular-adopciones">Fifi</h1>
                             <img class="titular-adopciones" src="img/Grupo 229.png" alt="sexo">
-                        </div>
-                        <div class="infoCat-adopciones">
-                            <h5 class="h5-adopciones">Estado</h5>
-                            <h5 class="h5-adopciones">Edad</h5>
-                        </div>
-                        <div class="infoCat2-adopciones">
-                            <h5 class="h5-adopciones">Positivo a sida</h5>
-                            <h5 class="h5-adopciones">15 meses</h5>
-                        </div>
-                    </div>
-                    <div id="cat4" class="contenedorCat-adopciones boton" onclick="cambiarSeccion(12)">
-                        <div id="imgCat2-adopciones" class="imgCat-adopciones"></div>
-                        <div class="fondoCat"></div>
-                        <div class="cat-adopciones">
-                            <img src="img/Grupo 359.png" alt="positivo">
-                            <h1 class="titular-adopciones">Eliot</h1>
-                            <img class="titular-adopciones" src="img/Grupo 254.png" alt="sexo">
                         </div>
                         <div class="infoCat-adopciones">
                             <h5 class="h5-adopciones">Estado</h5>
@@ -176,25 +168,7 @@
                             <h5 class="h5-adopciones">15 meses</h5>
                         </div>
                     </div>
-
-                    <div id="cat5" class="contenedorCat-adopciones boton" onclick="cambiarSeccion(12)">
-                        <div id="imgCat1-adopciones" class="imgCat-adopciones"></div>
-                        <div class="fondoCat"></div>
-                        <div class="cat-adopciones">
-                            <img src="img/Grupo 359.png" alt="positivo">
-                            <h1 class="titular-adopciones">Mulan</h1>
-                            <img class="titular-adopciones" src="img/Grupo 229.png" alt="sexo">
-                        </div>
-                        <div class="infoCat-adopciones">
-                            <h5 class="h5-adopciones">Estado</h5>
-                            <h5 class="h5-adopciones">Edad</h5>
-                        </div>
-                        <div class="infoCat2-adopciones">
-                            <h5 class="h5-adopciones">Positivo a sida</h5>
-                            <h5 class="h5-adopciones">15 meses</h5>
-                        </div>
-                    </div>
-                    <div id="cat6" class="contenedorCat-adopciones boton" onclick="cambiarSeccion(12)">
+                    <div id="cat4" class="contenedorCat-adopciones boton" onclick="cambiarSeccion(12),enviarNombreGato('Eliot')">
                         <div id="imgCat2-adopciones" class="imgCat-adopciones"></div>
                         <div class="fondoCat"></div>
                         <div class="cat-adopciones">
@@ -208,7 +182,42 @@
                         </div>
                         <div class="infoCat2-adopciones">
                             <h5 class="h5-adopciones">Positivo a sida</h5>
-                            <h5 class="h5-adopciones">15 meses</h5>
+                            <h5 class="h5-adopciones">3 meses</h5>
+                        </div>
+                    </div>
+
+                    <div id="cat5" class="contenedorCat-adopciones boton" onclick="cambiarSeccion(12),enviarNombreGato('Petunia')">
+                        <div id="imgCat1-adopciones" class="imgCat-adopciones"></div>
+                        <div class="fondoCat"></div>
+                        <div class="cat-adopciones">
+                            <img src="img/Grupo 359.png" alt="positivo">
+                            <h1 class="titular-adopciones">Petunia</h1>
+                            <img class="titular-adopciones" src="img/Grupo 229.png" alt="sexo">
+                        </div>
+                        <div class="infoCat-adopciones">
+                            <h5 class="h5-adopciones">Estado</h5>
+                            <h5 class="h5-adopciones">Edad</h5>
+                        </div>
+                        <div class="infoCat2-adopciones">
+                            <h5 class="h5-adopciones">Positivo a sida</h5>
+                            <h5 class="h5-adopciones">13 meses</h5>
+                        </div>
+                    </div>
+                    <div id="cat6" class="contenedorCat-adopciones boton" onclick="cambiarSeccion(12),enviarNombreGato('Máximo')">
+                        <div id="imgCat2-adopciones" class="imgCat-adopciones"></div>
+                        <div class="fondoCat"></div>
+                        <div class="cat-adopciones">
+                            <img src="img/Grupo 359.png" alt="positivo">
+                            <h1 class="titular-adopciones">Máximo</h1>
+                            <img class="titular-adopciones" src="img/Grupo 254.png" alt="sexo">
+                        </div>
+                        <div class="infoCat-adopciones">
+                            <h5 class="h5-adopciones">Estado</h5>
+                            <h5 class="h5-adopciones">Edad</h5>
+                        </div>
+                        <div class="infoCat2-adopciones">
+                            <h5 class="h5-adopciones">Positivo a sida</h5>
+                            <h5 class="h5-adopciones">9 meses</h5>
                         </div>
                     </div>
                 </div>
@@ -239,7 +248,7 @@
         <img id="volver-2" class="btn-volver1 boton oculto" src="img/volver1.png" alt="volver" onclick="cambiarSeccion(6);">
         <img id="fondo1-formulario" src="img/Trazado 449.png" alt="fondo1">
         <img id="fondo2-formulario" src="img/Trazado 448.png" alt="fondo2">
-        <div id="btnPrincipal-formulario" class="boton" onclick="MostrarFormulario('submit')"></div>
+        <div id="btnPrincipal-formulario" class="boton" onclick="MostrarFormulario('submit'),CorreoAyudas()"></div>
         <div id="btnCopia-formulario" class="boton" onclick="MostrarFormulario('.')"></div>
         <div id="contenedorInfo-formulario">
             <img src="img/Para más información.png" alt="Mas informacion">
@@ -253,14 +262,14 @@
                 <form id="formulario" action="">
                     <p>Nombres <input id="nombres-formulario" type="text"></p>
                     <p>Apellidos <input id="apellidos-formulario" type="text"></p>
-                    <p id="edad-formulario">Edad <select>
+                    <p>Edad <select id="edad-formulario">
                         <option>18-25</option>
                         <option>25-30</option>
                         <option>30-35</option>
                         <option>35-40</option>
                         <option>40+</option>
                     </select></p>
-                    <p id="tipoID-formulario">Tipo de documento <select>
+                    <p >Tipo de documento <select id="tipoID-formulario">
                         <option>C.C</option>
                         <option>P.A</option>
                         <option>R.C</option>
@@ -281,15 +290,9 @@
         <h1 id="titulo-preguntas">Preguntas frecuentes</h1>
         <img id="img-preguntas" src="img/Grupo 308.png" alt="imagen">
         <div id="contenedorBtn-preguntas">
-            <a href="#salud-preguntas" class="btn-preguntas">
-                Salud
-            </a>
-            <a href="#cuidados-preguntas" class="btn-preguntas">
-                Cuidados
-            </a>
-            <a href="#donaciones-preguntas" class="btn-preguntas">
-                Donaciones
-            </a>
+            <a href="#salud-preguntas" class="btn-preguntas">Salud</a>
+            <a href="#cuidados-preguntas" class="btn-preguntas">Cuidados</a>
+            <a href="#donaciones-preguntas" class="btn-preguntas">Donaciones</a>
         </div>
         <div id="panel-preguntas">
             <div id="contenedorRespuesta-preguntas">
@@ -327,35 +330,23 @@
         <h1 id="titulo-tips">Tips de expertos</h1>
         <div id="panel-tips">
             <div id="contenedorTips-tips">
-                <p>1. recuerda que------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------.
-                    ------------------------------------
-                </p>
-                <p>2. recuerda que------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------.
-                    ------------------------------------
-                </p>
-                <p>3. recuerda que------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------.
-                    ------------------------------------
-                </p>
-                <p>4. recuerda que------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------.
-                    ------------------------------------
-                </p>
-                <p>5. recuerda que------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------.
-                    ------------------------------------
-                </p>
-                <p>6. recuerda que------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------.
-                    ------------------------------------
-                </p>
-                <p>7. recuerda que------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------.
-                    ------------------------------------
-                </p>
-                <p>8. recuerda que------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------.
-                    ------------------------------------
-                </p>
-                <p>9. recuerda que------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------.
-                    ------------------------------------
+                <p><b>1.</b> Recuerda que debes visitar de manera más frecuente el veterinario, en promedio cada 3 o 6 meses.
+                </p><br>
+                <p><b>2.</b> Recuerda que debes evitar darle alimentos crudos a tu gato positivo.
+                </p><br>
+                <p><b>3.</b> Acostúmbrate a revisar su boca, su piel, observar como es su materia fecal y cuánto orina, si no ha querido comer o notas que duerme más que antes.
+                </p><br>
+                <p><b>4.</b> Cuando el gato muestre signos de enfermedad, habrá que realizar el tratamiento que corresponda, con antibióticos, vitaminas, etc. Es importante prevenir la aparición de infecciones secundarias que podrían complicar aún más el cuadro.
+                </p><br>
+                <p><b>5.</b> Busca fortalecer las defensa de tu gato positivo con medicamentos indicados por el , como vitaminas entre otros complementos.
+                </p><br>
+                <p><b>6.</b> Es ideal desparasitar tu gato positivo con más regularidad.
+                </p><br>
+                <p><b>7.</b> Recuerda que la comida húmeda son esenciales para luchar contra el deterioro de nuestro felino.
                 </p>
             </div>
         </div>
+        <img id="img-contactos" src="img/Grupo Rec.png" alt="fondo2">
     </section>
     <!-- Contactos -->
     <section id="seccion-contactos" class="contactos oculto">
@@ -369,70 +360,71 @@
         <div id="contenedorContactos-contactos">
             <div id="contenedor-contactos">
                 <p>Estas veterinarias están dispuestas a darte su ayuda, se prudente</p>
-                <div class="contenedorDoc-contactos">
+                <div class="contenedorDoc-contactos"><a href="https://wa.me/573156154883" class="sinestiloHiper">
                     <div id="imgDoc1" class="imgDoc-contactos"></div>
                     <div class="fondoDoc2"></div>
                     <div class="fondoDoc">
                         <div class="infoDoc-contactos">
-                            <h5>vet.Alonso Guerra</h5>
+                            <h5>Vet. Adriana Vasquez</h5>
                             <h5>+57 315 615 48 83</h5>
                         </div>
                         <div class="horaDoc-contactos">
                             <h3>24h</h3>
                         </div>
+                    </div>
+                </a>
+                </div>
+                <div class="contenedorDoc-contactos"><a href="https://wa.me/573156154883" class="sinestiloHiper">
+                    <div id="imgDoc1" class="imgDoc-contactos"></div>
+                    <div class="fondoDoc2"></div>
+                    <div class="fondoDoc">
+                        <div class="infoDoc-contactos">
+                            <h5>Vet. Alonso Guerra</h5>
+                            <h5>+57 315 615 48 83</h5>
+                        </div>
+                        <div class="horaDoc-contactos">
+                            <h3>24h</h3>
+                        </div></a>
                     </div>
                 </div>
-                <div class="contenedorDoc-contactos">
+                <div class="contenedorDoc-contactos"><a href="https://wa.me/573156154883" class="sinestiloHiper">
                     <div id="imgDoc1" class="imgDoc-contactos"></div>
                     <div class="fondoDoc2"></div>
                     <div class="fondoDoc">
                         <div class="infoDoc-contactos">
-                            <h5>vet.Alonso Guerra</h5>
+                            <h5>Vet. Sergio Muñoz</h5>
                             <h5>+57 315 615 48 83</h5>
                         </div>
                         <div class="horaDoc-contactos">
                             <h3>24h</h3>
                         </div>
+                    </div></a>
+                </div>
+                <div class="contenedorDoc-contactos"><a href="https://wa.me/573156154883" class="sinestiloHiper">
+                    <div id="imgDoc1" class="imgDoc-contactos"></div>
+                    <div class="fondoDoc2"></div>
+                    <div class="fondoDoc">
+                        <div class="infoDoc-contactos">
+                            <h5>Vet. Luis Uribe</h5>
+                            <h5>+57 315 615 48 83</h5>
+                        </div>
+                        <div class="horaDoc-contactos">
+                            <h3>24h</h3>
+                        </div></a>
                     </div>
                 </div>
-                <div class="contenedorDoc-contactos">
+                <div class="contenedorDoc-contactos"><a href="https://wa.me/573156154883" class="sinestiloHiper">
                     <div id="imgDoc1" class="imgDoc-contactos"></div>
                     <div class="fondoDoc2"></div>
                     <div class="fondoDoc">
                         <div class="infoDoc-contactos">
-                            <h5>vet.Alonso Guerra</h5>
+                            <h5>Vet. Aura Cadavid </h5>
                             <h5>+57 315 615 48 83</h5>
                         </div>
                         <div class="horaDoc-contactos">
                             <h3>24h</h3>
                         </div>
-                    </div>
-                </div>
-                <div class="contenedorDoc-contactos">
-                    <div id="imgDoc1" class="imgDoc-contactos"></div>
-                    <div class="fondoDoc2"></div>
-                    <div class="fondoDoc">
-                        <div class="infoDoc-contactos">
-                            <h5>vet.Alonso Guerra</h5>
-                            <h5>+57 315 615 48 83</h5>
-                        </div>
-                        <div class="horaDoc-contactos">
-                            <h3>24h</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="contenedorDoc-contactos">
-                    <div id="imgDoc1" class="imgDoc-contactos"></div>
-                    <div class="fondoDoc2"></div>
-                    <div class="fondoDoc">
-                        <div class="infoDoc-contactos">
-                            <h5>vet.Alonso Guerra</h5>
-                            <h5>+57 315 615 48 83</h5>
-                        </div>
-                        <div class="horaDoc-contactos">
-                            <h3>24h</h3>
-                        </div>
-                    </div>
+                    </div></a>
                 </div>
             </div>
         </div>
@@ -441,20 +433,16 @@
     <section id="seccion-informacion" class="informacion oculto">
         <img class="btn-volver1 boton" src="img/volver1.png" alt="volver" onclick="cambiarSeccion(6);">
         <img id="fondo-informacion" src="img/Trazado 446.png" alt="fondo">
-        <img id="ant-informacion" class="boton" src="img/Grupo 330.png" alt="boton">
-        <img id="sig-informacion" class="boton" src="img/Grupo 331.png" alt="boton">
+        <img id="ant-informacion" class="boton" src="img/Grupo 330.png" alt="boton" onclick="anteriorGato()">
+        <img id="sig-informacion" class="boton" src="img/Grupo 331.png" alt="boton" onclick="SiguienteGato()">
         <div id="imgCat-informacion"></div>
         <div id="panel-informacion">
-            <div id="indice-informacion">
-                <img id="indice1-informacion" class="indices-info" src="img/Elipse 6.png" alt="imagen">
-                <img id="indice2-informacion" class="indices-info" src="img/Elipse 7.png" alt="imagen">
-                <img id="indice3-informacion" class="indices-info" src="img/Elipse 7.png" alt="imagen">
-            </div>
             <div id="contenedor-informacion">
-                <p id="edad-informacion" class="margen-informacion">15 meses</p>
-                <p id="positivo-informacion" class="margen-informacion">Positivo a sida</p>
-                <p id="texto1-informacion" class="margen-informacion">Mulán fue encontrada en una construcción con sus otros 3 hermanitos, es la mayor y la única hembra, su mamá tenía sida por lo cuál esta preciosa es positiva también, es muy tierna y calmada, busca una familia que la adopte.</p>
-                <p id="texto2-informacion" class="margen-informacion">Mulán fue encontrada en una construcción con sus otros 3 hermanitos, es la mayor y la única hembra, su mamá tenía sida por lo cuál esta preciosa es positiva también, es muy tierna y calmada, busca una familia que la adopte.</p>
+                <br>
+                <p id="edad-informacion" class="margen-informacion"></p>
+                <p id="positivo-informacion" class="margen-informacion"></p>
+                <p id="texto1-informacion" class="margen-informacion"></p>
+                <p id="texto2-informacion" class="margen-informacion"></p>
             </div>
             <img id="adoptame-informacion" class="boton" src="img/adoptame.png" alt="adoptame" onclick="cambiarSeccion(13)">
         </div>
@@ -481,54 +469,54 @@
     <!-- Tramite -->
     <section id="seccion-tramite" class="tramite oculto">
         <img class="btn-volver1 boton" src="img/volver1.png" alt="volver" onclick="cambiarSeccion(13);">
-        <h1 id="titulo-tramite">Formulario de adopcion</h1>
+        <h1 id="titulo-tramite">Formulario de adopción</h1>
         <div id="panel-tramite">
             <div id="contenedorCandi-tramite">
                 <h5 class="margen-informacion">DATOS DEL CANDIDATO</h5>
                 <form action="">
-                    <p>Nombres <input id="nombres-formulario" type="text"></p>
-                    <p>Apellidos <input id="apellidos-formulario" type="text"></p>
-                    <p id="edad-formulario">Edad <select>
+                    <p>Nombres <input id="nombresFormulario" type="text"></p>
+                    <p>Apellidos <input id="apellidosFormulario" type="text"></p>
+                    <p id="edadFormulario">Edad <select id="edadFormulario1">
                         <option>18-25</option>
                         <option>25-30</option>
                         <option>30-35</option>
                         <option>35-40</option>
                         <option>40+</option>
                     </select></p>
-                    <p id="tipoID-formulario">Tipo de documento <select>
+                    <p id="tipoIDFormulario">Tipo de documento <select id="tipoIDFormulario1">
                         <option>C.C</option>
                         <option>P.A</option>
                         <option>R.C</option>
                         <option>C.E</option>
                     </select>
                     </p>
-                    <p>Numero de documento <input id="numDoc-formulario" type="number"></p>
-                    <p>Celular <input id="cel-formulario" type="number"></p>
-                    <p>Correo electronico <input id="correo-formulario" type="text">
+                    <p>Numero de documento <input id="numDocFormulario" type="number"></p>
+                    <p>Celular <input id="celFormulario" type="number"></p>
+                    <p>Correo electrónico <input id="correoFormulario" type="text">
                     </p>
-                    <h5 class="margen-informacion">COMPOSICION DEL NUCLEO FAMILIAR</h5>
-                    <p class="margen-informacion">Numero de personas en la familia <select>
+                    <h5 class="margen-informacion">COMPOSICIÓN DEL NUCLEO FAMILIAR</h5>
+                    <p class="margen-informacion">Número de personas en la familia <select id="persFormulario">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
                         <option>5+</option>
                     </select></p>
-                    <p class="lineaSelect margen-informacion">Adultos <select>
+                    <p class="lineaSelect margen-informacion">Adultos <select id="adulFormulario">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
                         <option>5+</option>
                     </select></p>
-                    <p class="lineaSelect margen-informacion">Niños <select>
+                    <p class="lineaSelect margen-informacion">Niños <select id="ninFormulario">
                         <option>0</option>
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
                     </select></p>
-                    <p class="lineaSelect margen-informacion">Bebes <select>
+                    <p class="lineaSelect margen-informacion">Bebes <select id="bbsFormulario">
                         <option>0</option>
                         <option>1</option>
                         <option>2</option>
@@ -536,18 +524,17 @@
                         <option>4</option>
                     </select></p>
                     <h5 class="margen-informacion">DATOS IMPORTANTES</h5>
-                    <p class="margen-informacion">¿Por qué quiere adoptar? <input type="text" class="w100"></p>
-                    <p class="margen-informacion">Si has tenido, cuéntanos de tu experiencia con los animales <input type="text" class="w100"></p>
-                    <p class="margen-informacion">¿Comparten esta decisión el resto de miembros del hogar? <input type="text" class="w100"></p>
-                    <p class="margen-informacion">¿Quién va a asumir los gastos derivados del animal? <input type="text" class="w100"></p>
-                    <p class="margen-informacion">¿Conoce los gastos que implica tener un animal? <input type="text" class="w100"></p>
-                    <p class="margen-informacion">¿Su vivienda tiene patio, terraza o jardín? Si es así, ¿es cubierto? <input type="text" class="w100"></p>
-                    <p class="margen-informacion">¿Es consiente de las sugerencias para adoptar gatos positivos? <input type="text" class="w100"></p>
+                    <p class="margen-informacion">¿Por qué quiere adoptar? <input id="pi1" type="text" class="w100"></p>
+                    <p class="margen-informacion">Si has tenido, cuéntanos de tu experiencia con los animales <input id="pi2" type="text" class="w100"></p>
+                    <p class="margen-informacion">¿Comparten esta decisión el resto de miembros del hogar? <input id="pi3" type="text" class="w100"></p>
+                    <p class="margen-informacion">¿Quién va a asumir los gastos derivados del animal? <input id="pi4" type="text" class="w100"></p>
+                    <p class="margen-informacion">¿Conoce los gastos que implica tener un animal? <input id="pi5" type="text" class="w100"></p>
+                    <p class="margen-informacion">¿Su vivienda tiene patio, terraza o jardín? Si es así, ¿es cubierto? <input id="pi6" type="text" class="w100"></p>
+                    <p class="margen-informacion">¿Es consiente de las sugerencias para adoptar gatos positivos? <input id="pi7" type="text" class="w100"></p>
                 </form>
-                <img id="enviar-tramite" class="boton" src="img/Componente 23 – 1.png" alt="submit" onclick="MostrarFormulario('.'),cambiarSeccion(8)">
+                <img id="enviar-tramite" class="boton" src="img/Componente 23 – 1.png" alt="submit" onclick="MostrarFormulario('.'),cambiarSeccion(8),enviarCorreo()">
             </div>
         </div>
     </section>
 </body>
-
 </html>
