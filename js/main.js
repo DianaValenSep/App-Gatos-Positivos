@@ -1,6 +1,7 @@
 var secciones = [];
 var tiempo_splash = 2500;
 var tiempo_nivel = 1000;
+var contadorGatos;
 window.onload = function() {
     inicializarReferencias();
     setTimeout(cambiarSplash, tiempo_splash);
@@ -391,35 +392,116 @@ function enviarNombreGato(nombreGato){
     let texto1=document.getElementById("texto1-informacion");
     let texto2=document.getElementById("texto2-informacion");
     if (nombreGato=="Mulan"){
+        contadorGatos=1;
         edad.innerHTML="7 meses";
         positivoinfo.innerHTML="Positivo a Sida";
         texto1.innerHTML="Mulán fue encontrada en una construcción con sus otros 3 hermanitos, es la mayor y la única hembra, su mamá tenía sida por lo cuál esta preciosa es positiva también."; 
         texto2.innerHTML="Es muy tierna y calmada, busca una familia que la adopte";
     }else if(nombreGato=="Bethoven"){
+        contadorGatos=2;
         edad.innerHTML="24 meses";
         positivoinfo.innerHTML="Positivo a leucemia";
         texto1.innerHTML="Fue encontrado en una plaza de mercado en una caja con su hermanita, es el menor."; 
         texto2.innerHTML="Es algo asustadizo pero le gusta jugar con su hermana y es amigable";
         
     }else if(nombreGato=="Fifi"){
+        contadorGatos=3;
         edad.innerHTML="15 meses";
         positivoinfo.innerHTML="Positivo a leucemia";
         texto1.innerHTML="Fue encontrado en una plaza de mercado en una caja con su hermanito, es el mayor y su hermano también esta en adopción."; 
         texto2.innerHTML="Es super activa, juega continuamente con su hermano también positivo.";
     }else if(nombreGato=="Eliot"){
+        contadorGatos=4;
         edad.innerHTML="3 meses";
         positivoinfo.innerHTML="Positivo a sida";
         texto1.innerHTML="Eliot es un gato muy especial, ya que no solo es positivo sino que también es un gato muy divertido, debido a un tic que tiene en su cabecita."; 
         texto2.innerHTML="Fue rescatado de una familia que lo maltrataba, es positivo de nacimiento.";
     }else if(nombreGato=="Petunia"){
+        contadorGatos=5;
         edad.innerHTML="13 meses";
         positivoinfo.innerHTML="Positivo a sida";
         texto1.innerHTML="Petunia es dulce como las flores y le encanta jugar con sus hermanitos."; 
         texto2.innerHTML="Es la menor de 4 hermanitos y fueron encontrados en la puerta de una veterinaria.";
     }else{
+        contadorGatos=6;
         edad.innerHTML="9 meses";
         positivoinfo.innerHTML="Positivo a sida";
         texto1.innerHTML="Fue encontrado en una plaza de mercado en una caja con su hermanito, es el mayor."; 
         texto2.innerHTML="Es super activo, juega continuamente con su hermano también positivo.";
     }
+}
+function SiguienteGato(){
+    let edad = document.getElementById("edad-informacion");
+    let positivoinfo=document.getElementById("positivo-informacion");
+    let texto1=document.getElementById("texto1-informacion");
+    let texto2=document.getElementById("texto2-informacion");
+    if(contadorGatos==1){
+        contadorGatos=2;
+        edad.innerHTML="24 meses";
+        positivoinfo.innerHTML="Positivo a leucemia";
+        texto1.innerHTML="Fue encontrado en una plaza de mercado en una caja con su hermanita, es el menor."; 
+        texto2.innerHTML="Es algo asustadizo pero le gusta jugar con su hermana y es amigable";
+    }else if(contadorGatos==2){
+        contadorGatos=3;
+        edad.innerHTML="15 meses";
+        positivoinfo.innerHTML="Positivo a leucemia";
+        texto1.innerHTML="Fue encontrado en una plaza de mercado en una caja con su hermanito, es el mayor y su hermano también esta en adopción."; 
+        texto2.innerHTML="Es super activa, juega continuamente con su hermano también positivo.";
+    }else if(contadorGatos==3){
+        contadorGatos=4;
+        edad.innerHTML="3 meses";
+        positivoinfo.innerHTML="Positivo a sida";
+        texto1.innerHTML="Eliot es un gato muy especial, ya que no solo es positivo sino que también es un gato muy divertido, debido a un tic que tiene en su cabecita."; 
+        texto2.innerHTML="Fue rescatado de una familia que lo maltrataba, es positivo de nacimiento.";
+    }else if(contadorGatos==4){
+        contadorGatos=5;
+        edad.innerHTML="13 meses";
+        positivoinfo.innerHTML="Positivo a sida";
+        texto1.innerHTML="Petunia es dulce como las flores y le encanta jugar con sus hermanitos."; 
+        texto2.innerHTML="Es la menor de 4 hermanitos y fueron encontrados en la puerta de una veterinaria.";
+    }else if (contadorGatos==5){
+        contadorGatos=6;
+        edad.innerHTML="9 meses";
+        positivoinfo.innerHTML="Positivo a sida";
+        texto1.innerHTML="Fue encontrado en una plaza de mercado en una caja con su hermanito, es el mayor."; 
+        texto2.innerHTML="Es super activo, juega continuamente con su hermano también positivo.";
+    }
+}
+function anteriorGato(){
+    let edad = document.getElementById("edad-informacion");
+    let positivoinfo=document.getElementById("positivo-informacion");
+    let texto1=document.getElementById("texto1-informacion");
+    let texto2=document.getElementById("texto2-informacion");
+    if (contadorGatos==6){
+        contadorGatos=5;
+        edad.innerHTML="13 meses";
+        positivoinfo.innerHTML="Positivo a sida";
+        texto1.innerHTML="Petunia es dulce como las flores y le encanta jugar con sus hermanitos."; 
+        texto2.innerHTML="Es la menor de 4 hermanitos y fueron encontrados en la puerta de una veterinaria.";
+    }else if(contadorGatos==5){
+        contadorGatos=4;
+        edad.innerHTML="3 meses";
+        positivoinfo.innerHTML="Positivo a sida";
+        texto1.innerHTML="Eliot es un gato muy especial, ya que no solo es positivo sino que también es un gato muy divertido, debido a un tic que tiene en su cabecita."; 
+        texto2.innerHTML="Fue rescatado de una familia que lo maltrataba, es positivo de nacimiento.";
+    }else if(contadorGatos==4){
+        contadorGatos=3;
+        edad.innerHTML="15 meses";
+        positivoinfo.innerHTML="Positivo a leucemia";
+        texto1.innerHTML="Fue encontrado en una plaza de mercado en una caja con su hermanito, es el mayor y su hermano también esta en adopción."; 
+        texto2.innerHTML="Es super activa, juega continuamente con su hermano también positivo.";
+    }else if(contadorGatos==3){
+        contadorGatos=2;
+        edad.innerHTML="24 meses";
+        positivoinfo.innerHTML="Positivo a leucemia";
+        texto1.innerHTML="Fue encontrado en una plaza de mercado en una caja con su hermanita, es el menor."; 
+        texto2.innerHTML="Es algo asustadizo pero le gusta jugar con su hermana y es amigable";
+    }else if(contadorGatos==2){
+        contadorGatos=1;
+        edad.innerHTML="7 meses";
+        positivoinfo.innerHTML="Positivo a Sida";
+        texto1.innerHTML="Mulán fue encontrada en una construcción con sus otros 3 hermanitos, es la mayor y la única hembra, su mamá tenía sida por lo cuál esta preciosa es positiva también."; 
+        texto2.innerHTML="Es muy tierna y calmada, busca una familia que la adopte";
+    }
+
 }
