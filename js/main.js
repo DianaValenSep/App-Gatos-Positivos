@@ -101,32 +101,32 @@ function RetrocederPagInfo() {
 let gatos = [
 	[
 		"cat1",
-		"sida",
+		7,
 		"macho"
     ],
     [
 		"cat2",
-		"leucemia",
+		24,
 		"hembra"
     ],
     [
 		"cat3",
-		"sida",
+		15,
 		"macho"
     ],
     [
 		"cat4",
-		"leucemia",
+		3,
 		"hembra"
     ],
     [
 		"cat5",
-		"sida",
+		13,
 		"macho"
     ],
     [
 		"cat6",
-		"leucemia",
+		9,
 		"hembra"
     ],
 ];
@@ -134,6 +134,8 @@ let gatos = [
 /* Funciones - Filtrar ----------------------------------------------------------*/
 var machos = [];
 var hembras = [];
+var jovenes = [];
+var adultos = [];
 var aux=0;
 for(var i=0;i<gatos.length;i++){
     if(gatos[i][2]=="macho"){
@@ -143,7 +145,14 @@ for(var i=0;i<gatos.length;i++){
         hembras.push(gatos[i][0]);
     }
 }
-
+for(var i=0;i<gatos.length;i++){
+    if(gatos[i][1]<=12){
+        jovenes.push(gatos[i][0]);
+    }
+    else{
+        adultos.push(gatos[i][0]);
+    }
+}
 function mostrarTodos() {
     var cat1 = document.getElementById("cat1");
     cat1.style.display='block';
@@ -171,7 +180,6 @@ function mostrarMachos() {
     }
 }
 function mostrarHembras() {
-
     for(var i=0;i<hembras.length;i++){
         var gato = document.getElementById(hembras[i]);
         if(gato.style.display=='none'){
@@ -183,7 +191,30 @@ function mostrarHembras() {
         gato.style.display='none';
     }
 }
-
+function mostrarJovenes() {
+    for(var i=0;i<jovenes.length;i++){
+        var gato = document.getElementById(jovenes[i]);
+        if(gato.style.display=='none'){
+            gato.style.display='block';
+        }
+    }
+    for(var i=0;i<adultos.length;i++){
+        var gato = document.getElementById(adultos[i]);
+        gato.style.display='none';
+    }
+}
+function mostrarAdultos() {
+    for(var i=0;i<adultos.length;i++){
+        var gato = document.getElementById(adultos[i]);
+        if(gato.style.display=='none'){
+            gato.style.display='block';
+        }
+    }
+    for(var i=0;i<jovenes.length;i++){
+        var gato = document.getElementById(jovenes[i]);
+        gato.style.display='none';
+    } 
+}
 /* Funciones - colaboraciones ----------------------------------------------------------*/
 function MostrarColaboraciones(id_colaboracion) {
     let titulo = document.getElementById("titulo-colaboraciones");
