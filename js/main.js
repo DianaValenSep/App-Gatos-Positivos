@@ -346,6 +346,8 @@ function MostrarFormulario(id_formulario) {
         p2.style.width = "80%";
         p2.style.margin = "auto";
         p2.style.marginBottom = "5%"
+        btn.style.width = "128px";
+        btn.style.height = "61px";
         volver1.classList.remove("oculto");
         volver2.classList.add("oculto");
         btn.classList.remove("oculto");

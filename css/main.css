@@ -133,9 +133,9 @@ margin-top: 30%;
 
 #orca-home {
     background-image: url(../img/Componente\ 8\ –\ 1.png);
-    position: relative;
-    top: 220px;
-    left: 20px;
+    position: absolute;
+    top: 84%;
+    left: 5%;
     width: 50px;
     height: 70px;
 }
@@ -144,7 +144,7 @@ margin-top: 30%;
     position: absolute;
     left: 0px;
     top: 0px;
-    height: 720px;
+    height: 100%;
     z-index: 0;
 }
 
@@ -183,7 +183,7 @@ margin-top: 30%;
 #panel-orca {
     position: relative;
     top: 50px;
-    height: 481.1px;
+    height: 72%;
     width: 100%;
     background-color: white;
     border-top-right-radius: 10%;
@@ -211,7 +211,7 @@ margin-top: 30%;
     position: absolute;
     left: 0px;
     top: 0px;
-    height: 720px;
+    height: 100%;
     z-index: 0;
 }
 
@@ -238,6 +238,7 @@ margin-top: 30%;
 #contenedorBtn-colaboraciones {
     position: absolute;
     bottom: 12px;
+    margin: auto;
 }
 
 .btn-colaboracion {
@@ -282,13 +283,14 @@ margin-top: 30%;
 
 #contenedorFiltros-adopciones {
     position: absolute;
-    width: 20%;
+    margin: 15px;
+    width: 25%;
     top: 10%;
     right: 15px;
     background-color: rgb(255, 252, 235);
     border-radius: 15%;
     text-align: right;
-    padding: 10px;
+    font-size: 15px;
 }
 
 #img-adopciones {
@@ -613,6 +615,7 @@ margin-top: 30%;
 #contenedorCats-adopciones {
     width: 90%;
     margin: auto;
+    margin-top: 15%;
     padding-bottom: 10px;
 }
 
@@ -921,11 +924,133 @@ margin-top: 30%;
     text-decoration: none;
 }
 
+@media(max-width: 356px){
+    section{
+        width: 100%;
+    }
+    #contenedorFiltros-adopciones {
+        position: absolute;
+        margin: 10px;
+        width: 25%;
+        top: 10%;
+        right: 15px;
+        background-color: rgb(255, 252, 235);
+        border-radius: 15%;
+        text-align: right;
+        font-size: 12px;
+    }
+    
+    .contenedorCat-adopciones {
+        position: relative;
+        margin-top: 10px;
+        font-size: 70%;
+    }
+
+    .cat-adopciones {
+        position: absolute;
+        top: 5%;
+        left: 35%;
+        z-index: 1;
+    }
+
+    .infoCat-adopciones {
+        position: relative;
+        display: inline-block;
+        width: 10%;
+        text-align: left;
+        vertical-align: text-top;
+    }
+
+    .infoCat2-adopciones {
+        display: inline-block;
+        text-align: right;
+        width: 40%;
+        vertical-align: text-top;
+        position: relative;
+    }
+
+    .contenedorDoc-contactos {
+        position: relative;
+        margin-top: 10px;
+        font-size: 80%;
+    }
+    
+    #contenedor-contactos {
+        margin-top: 15px;
+        width: 90%;
+        margin: auto;
+        height: fit-content;
+    }
+
+    .btn-orca {
+        display: inline;
+        position: relative;
+        top: 34.5px;
+        margin: 2px;
+        padding: 12px;
+        background-color: rgb(253, 198, 32);
+        border-top-left-radius: 20%;
+        border-top-right-radius: 20%;
+        font-size: 12px;
+    }
+
+    #contenedorBtn-colaboraciones {
+        position: absolute;
+        bottom: 12px;
+        font-size: 13px;
+        margin: auto;
+    }
+
+    #btnPrincipal-colaboraciones {
+        position: absolute;
+        top: 430px;
+        right: 0px;
+        height: 84px;
+        width: 163px;
+        background-image: url(../img/Componente\ 4\ –\ 1.png);
+    }
+}
+
 @media(max-width: 480px){
     section{
         width: 100%;
     }
 }
+
+@media(max-height:640px){
+    section{
+        height: 100%;
+    }
+    #panel-preguntas {
+        background-color: white;
+        width: 100%;
+        height: fit-content;
+        position: absolute;
+        top: 33%;
+        border-top-left-radius: 8%;
+        border-top-right-radius: 8%;
+    }
+    #btnPrincipal-formulario {
+        position: absolute;
+        top: 400px;
+        right: 0px;
+        height: 61px;
+        width: 128px;
+        background-image: url(../img/Componente\ 19\ –\ 1.png);
+    }
+    #p-formulario {
+        width: 80%;
+        margin: auto;
+        margin-bottom: 20px;
+        font-size: 12px;
+    }
+    #contenedor-instrucciones {
+        position: relative;
+        top: 35%;
+        font-size: 13px;
+    }
+}
+
 @media(max-height:850px){
     section{
         height: 100%;
