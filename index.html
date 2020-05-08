@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, height=device-heigth, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="js/main.js"></script>
@@ -34,7 +34,9 @@
             <img id="indice2-info" class="indices-info" src="img/Elipse 7.png" alt="imagen">
             <img id="indice3-info" class="indices-info" src="img/Elipse 7.png" alt="imagen">
         </div>
-        <img src="img/Grupo 311.png" id="imgSaltar" class="imgComenzar-info boton" alt="imagen" onclick="cambiarSeccion(3);">
+        <div id="contenedor-info">
+            <img src="img/Grupo 311.png" id="imgSaltar" class="imgComenzar-info boton" alt="imagen" onclick="cambiarSeccion(3);">    
+        </div>
         <img id="boton-info" class="boton" src="img/Grupo 32.png" alt="imagen" onclick="SiguientePagInfo();">
         <img id="botonizq-info" class="oculto boton" src="img/Grupo 33.png" alt="imagen" onclick="RetrocederPagInfo();">
 
@@ -288,15 +290,9 @@
         <h1 id="titulo-preguntas">Preguntas frecuentes</h1>
         <img id="img-preguntas" src="img/Grupo 308.png" alt="imagen">
         <div id="contenedorBtn-preguntas">
-            <a href="#salud-preguntas" class="btn-preguntas">
-                Salud
-            </a>
-            <a href="#cuidados-preguntas" class="btn-preguntas">
-                Cuidados
-            </a>
-            <a href="#donaciones-preguntas" class="btn-preguntas">
-                Donaciones
-            </a>
+            <a href="#salud-preguntas" class="btn-preguntas">Salud</a>
+            <a href="#cuidados-preguntas" class="btn-preguntas">Cuidados</a>
+            <a href="#donaciones-preguntas" class="btn-preguntas">Donaciones</a>
         </div>
         <div id="panel-preguntas">
             <div id="contenedorRespuesta-preguntas">
