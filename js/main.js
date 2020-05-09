@@ -97,37 +97,36 @@ function RetrocederPagInfo() {
 }
 
 /* Base de datos - Gatos ------------------------------------------------------*/
-
 let gatos = [
 	[
 		"cat1",
 		7,
-		"macho"
+		"hembra"
     ],
     [
 		"cat2",
 		24,
-		"hembra"
+		"macho"
     ],
     [
 		"cat3",
 		15,
-		"macho"
+		"hembra"
     ],
     [
 		"cat4",
 		3,
-		"hembra"
+		"macho"
     ],
     [
 		"cat5",
 		13,
-		"macho"
+		"hembra"
     ],
     [
 		"cat6",
 		9,
-		"hembra"
+		"macho"
     ],
 ];
 
@@ -215,6 +214,7 @@ function mostrarAdultos() {
         gato.style.display='none';
     } 
 }
+
 /* Funciones - colaboraciones ----------------------------------------------------------*/
 function MostrarColaboraciones(id_colaboracion) {
     let titulo = document.getElementById("titulo-colaboraciones");
