@@ -152,30 +152,24 @@ for(var i=0;i<gatos.length;i++){
         adultos.push(gatos[i][0]);
     }
 }
+function ocultarTodos() {
+    for(var i=0;i<gatos.length;i++){
+        var gato = document.getElementById(gatos[i][0]);
+        gato.style.display='none';
+    }
+}
 function mostrarTodos() {
-    var cat1 = document.getElementById("cat1");
-    cat1.style.display='block';
-    var cat2 = document.getElementById("cat2");
-    cat2.style.display='block';
-    var cat3 = document.getElementById("cat3");
-    cat3.style.display='block';
-    var cat4 = document.getElementById("cat4");
-    cat4.style.display='block';
-    var cat5 = document.getElementById("cat5");
-    cat5.style.display='block';
-    var cat6 = document.getElementById("cat6");
-    cat6.style.display='block';
+    for(var i=0;i<gatos.length;i++){
+        var gato = document.getElementById(gatos[i][0]);
+        gato.style.display='block';
+    }
 }
 function mostrarMachos() {
-    for(var i=0;i<machos.length;i++){
+    for(var i=0;i<hembras.length;i++){
         var gato = document.getElementById(machos[i]);
         if(gato.style.display=='none'){
             gato.style.display='block';
         }
-    }
-    for(var i=0;i<hembras.length;i++){
-        var gato = document.getElementById(hembras[i]);
-        gato.style.display='none';
     }
 }
 function mostrarHembras() {
@@ -185,10 +179,6 @@ function mostrarHembras() {
             gato.style.display='block';
         }
     }
-    for(var i=0;i<machos.length;i++){
-        var gato = document.getElementById(machos[i]);
-        gato.style.display='none';
-    }
 }
 function mostrarJovenes() {
     for(var i=0;i<jovenes.length;i++){
@@ -196,10 +186,6 @@ function mostrarJovenes() {
         if(gato.style.display=='none'){
             gato.style.display='block';
         }
-    }
-    for(var i=0;i<adultos.length;i++){
-        var gato = document.getElementById(adultos[i]);
-        gato.style.display='none';
     }
 }
 function mostrarAdultos() {
@@ -209,10 +195,6 @@ function mostrarAdultos() {
             gato.style.display='block';
         }
     }
-    for(var i=0;i<jovenes.length;i++){
-        var gato = document.getElementById(jovenes[i]);
-        gato.style.display='none';
-    } 
 }
 
 /* Funciones - colaboraciones ----------------------------------------------------------*/
