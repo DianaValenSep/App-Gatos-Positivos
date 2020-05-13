@@ -278,7 +278,9 @@ margin-top: 30%;
 #p-adopciones {
     position: absolute;
     right: 25px;
-    top: 5%;
+    top: 20%;
+    font-size: 23px;
+    font-weight: bold;
 }
 
 #contenedorFiltros-adopciones {
@@ -292,6 +294,15 @@ margin-top: 30%;
     text-align: right;
     font-size: 15px;
 }
+#panel-adopciones #contenedor-filtrosadop{
+    text-align: center;
+    margin-top: 32%;
+    z-index: 10;
+    font-size: 18px;
+}
+.subrayado{
+    text-decoration: none;
+}
 
 #img-adopciones {
     position: absolute;
@@ -302,13 +313,13 @@ margin-top: 30%;
 #img2-adopciones {
     position: absolute;
     left: 35px;
-    top: 15%;
+    top: 10%;
 }
 
 #contenedor-adopciones {
     position: absolute;
     width: 100%;
-    top: 30%;
+    top: 32%;
 }
 
 .ayudas {
@@ -615,7 +626,7 @@ margin-top: 30%;
 #contenedorCats-adopciones {
     width: 90%;
     margin: auto;
-    margin-top: 15%;
+    margin-top: 10%;
     padding-bottom: 10px;
 }
 

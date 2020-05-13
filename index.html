@@ -108,15 +108,13 @@
         <div id="panel-adopciones">
             <img id="img2-adopciones" src="img/Componente 15 – 1.png" alt="positivo +">
             <p id="p-adopciones">Filtrar</p>
-            <div id="contenedorFiltros-adopciones">
-                <a href="#" onclick="ocultarTodos(),mostrarTodos()">Todos</a>
-                <p>Edad:</p>
-                <a href="#" onclick="ocultarTodos(),mostrarJovenes()">Jovenes</a>
-                <a href="#" onclick="ocultarTodos(),mostrarAdultos()">Adultos</a>
-                <p>Sexo:</p>
-                <a href="#" onclick="ocultarTodos(),mostrarHembras()">Hembras</a>
-                <a href="#" onclick="ocultarTodos(),mostrarMachos()">Machos</a>
-            </div>
+            <p id="contenedor-filtrosadop">
+                <a href="#" onclick="ocultarTodos(),mostrarTodos()" class="subrayado">Todos</a>
+                <a href="#" onclick="ocultarTodos(),mostrarJovenes()" class="subrayado">Jovenes</a>
+                <a href="#" onclick="ocultarTodos(),mostrarAdultos()" class="subrayado">Adultos</a>
+                <a href="#" onclick="ocultarTodos(),mostrarHembras()" class="subrayado">Hembras</a>
+                <a href="#" onclick="ocultarTodos(),mostrarMachos()" class="subrayado">Machos</a>
+            </p>
             <div id="contenedor-adopciones">
                 <div id="contenedorCats-adopciones">
                     <div id="cat1" class="contenedorCat-adopciones boton animated zoomIn" onclick="cambiarSeccion(12),enviarNombreGato('Mulan')">
