@@ -160,6 +160,9 @@ margin-top: 30%;
 .texto-orca {
     margin: 11px;
 }
+.textorca{
+    text-align: center;
+}
 
 .btn-orca {
     display: inline;
@@ -224,6 +227,7 @@ margin-top: 30%;
     width: 300px;
     margin: auto;
     margin-top: 30px;
+    text-align: center;
 }
 
 #btnPrincipal-colaboraciones {
@@ -681,7 +685,6 @@ margin-top: 30%;
 #imgCat1-adopciones {
     background-image: url(../img/Grupo\ 154.png);
 }
-
 #imgCat2-adopciones {
     background-image: url(../img/Bethoven2.jpeg);
 }
@@ -769,7 +772,19 @@ margin-top: 30%;
 }
 
 #imgDoc1 {
-    background-image: url(../img/Elipse\ 71.png);
+    background-image: url(../img/vete1.jpeg);
+} 
+#imgDoc2 {
+    background-image: url(../img/vete2.jpeg);
+} 
+#imgDoc3 {
+    background-image: url(../img/vete3.jpeg);
+} 
+#imgDoc4 {
+    background-image: url(../img/vete4.jpeg);
+} 
+#imgDoc5{
+    background-image: url(../img/vete5.jpeg);
 } 
 /*Acá va las imagenes de los veterinarios modificando el id de cada imagen imgDoc2...*/
 
@@ -800,7 +815,6 @@ margin-top: 30%;
     width: 100%;
     height: 60%;
     z-index: 0;
-    background-image: url(../img/Imagen\ 2.png);
     background-position: center;
     background-size: cover;
 }
