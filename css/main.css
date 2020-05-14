@@ -1093,3 +1093,38 @@ margin-top: 30%;
         height: 100%;
     }
 }
+
+#nombres-formulario {
+    margin-bottom: 5px;
+    width: 75%;
+}
+
+#apellidos-formulario {
+    margin-bottom: 5px;
+    width: 75%;
+}
+
+#edad-formulario {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+#tipoID-formulario {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+#numDoc-formulario {
+    width: 98%;
+    margin-bottom: 5px;
+}
+
+#cel-formulario {
+    width: 79%;
+    margin-bottom: 5px;
+}
+
+#correo-formulario {
+    width: 98%;
+    margin-bottom: 5px;
+}
