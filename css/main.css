@@ -11,8 +11,8 @@ body{
 }
 
 section {
-    width: 360px;
-    height: 720px;
+    width: 100%;
+    height: 100%;
     text-align: center;
 }
 
@@ -224,7 +224,7 @@ margin-top: 30%;
 }
 
 #p-colaboraciones {
-    width: 300px;
+    margin: 90%;
     margin: auto;
     margin-top: 30px;
     text-align: center;
@@ -241,8 +241,7 @@ margin-top: 30%;
 
 #contenedorBtn-colaboraciones {
     position: absolute;
-    bottom: 12px;
-    margin: auto;
+    bottom: 10px;
 }
 
 .btn-colaboracion {
@@ -960,100 +959,6 @@ margin-top: 30%;
 .sinestiloHiper{
     text-decoration: none;
 }
-
-@media(max-width: 356px){
-    section{
-        width: 100%;
-    }
-    #contenedorFiltros-adopciones {
-        position: absolute;
-        margin: 10px;
-        width: 25%;
-        top: 10%;
-        right: 15px;
-        background-color: rgb(255, 252, 235);
-        border-radius: 15%;
-        text-align: right;
-        font-size: 12px;
-    }
-    
-    .contenedorCat-adopciones {
-        position: relative;
-        margin-top: 10px;
-        font-size: 70%;
-    }
-
-    .cat-adopciones {
-        position: absolute;
-        top: 5%;
-        left: 35%;
-        z-index: 1;
-    }
-
-    .infoCat-adopciones {
-        position: relative;
-        display: inline-block;
-        width: 10%;
-        text-align: left;
-        vertical-align: text-top;
-    }
-
-    .infoCat2-adopciones {
-        display: inline-block;
-        text-align: right;
-        width: 40%;
-        vertical-align: text-top;
-        position: relative;
-    }
-
-    .contenedorDoc-contactos {
-        position: relative;
-        margin-top: 10px;
-        font-size: 80%;
-    }
-    
-    #contenedor-contactos {
-        margin-top: 15px;
-        width: 90%;
-        margin: auto;
-        height: fit-content;
-    }
-
-    .btn-orca {
-        display: inline;
-        position: relative;
-        top: 34.5px;
-        margin: 2px;
-        padding: 12px;
-        background-color: rgb(253, 198, 32);
-        border-top-left-radius: 20%;
-        border-top-right-radius: 20%;
-        font-size: 12px;
-    }
-
-    #contenedorBtn-colaboraciones {
-        position: absolute;
-        bottom: 12px;
-        font-size: 13px;
-        margin: auto;
-    }
-
-    #btnPrincipal-colaboraciones {
-        position: absolute;
-        top: 430px;
-        right: 0px;
-        height: 84px;
-        width: 163px;
-        background-image: url(../img/Componente\ 4\ –\ 1.png);
-    }
-}
-
-@media(max-width: 480px){
-    section{
-        width: 100%;
-    }
-}
-
 @media(max-height:640px){
     section{
         height: 100%;
@@ -1087,13 +992,276 @@ margin-top: 30%;
         font-size: 13px;
     }
 }
-
-@media(max-height:850px){
-    section{
-        height: 100%;
+@media(max-height: 568px){
+    #img-splash {
+        top: 160px;
+    }
+    #imgGato-info{
+        width: 104px;
+        height: 101px;
+    }
+    .subrayado{
+        font-size: 90%;
+    }
+    #contenedorFiltros-adopciones {
+        margin: 10px;
+        font-size: 12px;
+    }
+    .contenedorCat-adopciones {
+        font-size: 70%;
+    }
+    .cat-adopciones {
+        left: 35%;
+    }
+    .infoCat-adopciones {
+        width: 10%;
+    }
+    .infoCat2-adopciones {
+        width: 40%;
+    }
+    .contenedorDoc-contactos {
+        font-size: 80%;
+    }
+    #contenedor-contactos {
+        width: 90%;
+    }
+    .btn-orca {
+        font-size: 86%;
+    }
+    #btnPrincipal-colaboraciones {
+        top: 430px;
+    }
+    .btn-colaboracion{
+        font-size: 86%;
+    }
+    input{
+        font-size: 10px;
+    }
+    select{
+        font-size: 10px;
+    }
+    #contenedor-formulario{
+        font-size: 10px;
     }
 }
-
+@media(max-height:533px){
+    #btnPrincipal-colaboraciones {
+        top: 390px;
+    }
+    #imgGato-info{
+        width: 78px;
+        height: 76px;
+    }
+    #contenedor-colaboraciones{
+        top: 120px;
+    }
+    #btnPrincipal-formulario{
+        top: 350px;
+    }
+}
+@media(max-height:320px){
+    #img-splash {
+        top: 100px;
+        width: 78px;
+        height: 76px;
+    }
+    #h1-info{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    #p-info{
+        font-size: 10px;
+    }
+    #imgGato-info{
+        width: 52px;
+        height: 50px;
+    }
+    #boton-info{
+        top: 130px;
+    }
+    #botonizq-info{
+        top: 130px;
+    }
+    #logo-home{
+        width: 70%;
+        right: 6%;
+        top: 40px;
+    }
+    .botones-home{
+        top: 70px;
+        left: 60%;
+        height: 55px;
+        width: 100px;
+        background-size: cover;
+    }
+    #orca-home{
+        width: 30px;
+        height: 42px;
+        background-size: cover;
+    }
+    #titulo-adopciones{
+        top: 12%;
+        font-size: 90%;
+    }
+    #p-adopciones{
+        font-size: 60%;
+        top: 25%;
+    }
+    .subrayado{
+        font-size: 60%;
+    }
+    .cat-adopciones{
+        margin-left:-12px;
+    }
+    .imgCat-adopciones{
+        width: 60px;
+        height: 60px;
+        right: 5%;
+    }
+    .img-positivo{
+        width: 20px;
+        height: 20px;
+    }
+    .titular-adopciones{
+        font-size: 15px;
+    }
+    #panel-informacion{
+        top: 40%;
+    }
+    #contenedor-informacion{
+        font-size: 80%;
+    }
+    #ant-informacion{
+        height: 32px;
+        width: 26px;
+        background-size: cover;
+    }
+    #sig-informacion{
+        height: 32px;
+        width: 19px;
+        background-size: cover;
+    }
+    .btn-volver{
+        height: 17px;
+        width: 91px;
+        background-size: cover;
+    }
+    .btn-volver1{
+        height: 17px;
+        width: 48px;
+        background-size: cover;
+    }
+    #contenedor-instrucciones{
+        margin-top: 20%;
+    }
+    #adoptame-instrucciones{
+        top: 480px;
+    }
+    #masInfo-formulario{
+        height: 19px;
+        width: 198px;
+    }
+    #seccion-tramite{
+        font-size: 70%;
+    }
+    #seccion-ayudas{
+        font-size: 70%;
+    }
+    #seccion-preguntas{
+        font-size: 70%;
+    }
+    .btn-preguntas{
+        width: 54px;
+    }
+    #panel-preguntas{
+        margin-top: 6%;
+    }
+    #seccion-contactos{
+        font-size: 70%;
+    }
+    .imgDoc-contactos{
+        height: 80px;
+        width: 80px;
+    }
+    .contenedorDoc-contactos{
+        font-size: 100%;
+    }
+    .fondoDoc2{
+        height: 88%;
+        width: 70%;
+        top: 7%;
+    }
+    #img-contactos{
+        width: 65px;
+        height: 86px;
+        background-size: cover;
+    }
+    #seccion-tips{
+        font-size: 70%;
+    }
+    #seccion-orca{
+        font-size: 70%;
+    }
+    .btn-orca{
+        font-size: 80%;
+        width: 32px;
+    }
+    #seccion-colaboraciones{
+        font-size: 70%;
+    }
+    #contenedor-colaboraciones{
+        top: 20px;
+        width: 240px;
+    }
+    #btnPrincipal-colaboraciones{
+        width: 72px;
+        height: 37px;
+        background-size: cover;
+        top: 180px;
+    }
+    .btn-colaboracion{
+        font-size: 80%;
+    }
+    #seccion-formulario{
+        font-size: 70%;
+    }
+    #fondo2-formulario{
+        display: none;
+    }
+    #contenedorInfo-formulario{
+        display: none;
+    }
+    #btnPrincipal-formulario{
+        background-size: cover;
+        top: 350px;
+    }
+    input{
+        font-size: 10px;
+    }
+    #contenedor-formulario{
+        font-size: 10px;
+    }
+    select{
+        font-size: 10px;
+    }
+    #p-formulario {
+        width: 80%;
+        margin-bottom: 5px;
+    }
+}
+@media(min-width:361px){
+    .botones-home{
+        left: 60%;
+    }
+    #contenedorBtn-colaboraciones{
+        left: 2%;
+    }
+}
+@media(min-width:390px){
+    #contenedorBtn-colaboraciones{
+        left: 6%;
+    }
+}
 #nombres-formulario {
     margin-bottom: 5px;
     width: 75%;
