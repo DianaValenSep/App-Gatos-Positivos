@@ -334,6 +334,8 @@ function MostrarFormulario(id_formulario) {
         volver2.classList.add("oculto");
         btn.classList.remove("oculto");
         btnCopia.classList.add("oculto");
+        btnCopia.style.display="none";
+        btnCopia.onclick="";
     } else {
         h1.innerHTML = "¡Gracias!";
         h1.classList.remove("oculto");
